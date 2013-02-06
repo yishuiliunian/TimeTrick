@@ -50,6 +50,7 @@
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [dateFlipView stopTrack];
     DZTime* time = [DZTime createEntity];
     time.dateBegain = dateFlipView.timeTrackManager.beginDate;
     time.dateEnd = dateFlipView.timeTrackManager.endDate;
@@ -73,9 +74,11 @@
     dateFlipView.frame = CGRectMake(0.0, 0.0, 320, 40);
     [self.view addSubview:dateFlipView];
     
+    [dateFlipView startTrack];
     pickView.frame = CGRectMake(0.0, CGRectGetHeight(self.view.frame)-200, CGRectGetWidth(self.view.frame), 100);
     [self.view addSubview:pickView];
     pickView.delegate = self;
+    
 	// Do any additional setup after loading the view.
 }
 

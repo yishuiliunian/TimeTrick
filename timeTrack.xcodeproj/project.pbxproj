@@ -62,6 +62,8 @@
 		875608F716C11C99009AD5D5 /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608F416C11C99009AD5D5 /* NSDate-Utilities.m */; };
 		875608F816C11C99009AD5D5 /* TimeFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608F616C11C99009AD5D5 /* TimeFormatters.m */; };
 		8756090F16C13F1C009AD5D5 /* DZTimeTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */; };
+		87E855F516C23BCB0039E196 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F416C23BCB0039E196 /* PieChartView.m */; };
+		87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F816C23BEC0039E196 /* DZPieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,10 @@
 		875608F616C11C99009AD5D5 /* TimeFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatters.m; sourceTree = "<group>"; };
 		8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTimeTrackManager.h; sourceTree = "<group>"; };
 		8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTimeTrackManager.m; sourceTree = "<group>"; };
+		87E855F316C23BCB0039E196 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
+		87E855F416C23BCB0039E196 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
+		87E855F716C23BEC0039E196 /* DZPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPieViewController.h; sourceTree = "<group>"; };
+		87E855F816C23BEC0039E196 /* DZPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPieViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 		87076AF816BF760E0004EC84 /* timeTrack */ = {
 			isa = PBXGroup;
 			children = (
+				87E855F216C23BCB0039E196 /* PieChartView */,
 				875608F216C11C99009AD5D5 /* NSDATE */,
 				875608E016C100F8009AD5D5 /* JDFlipNumberView */,
 				875608C116C0B550009AD5D5 /* JTGestureBasedTableView */,
@@ -233,6 +240,8 @@
 				87076B8816C09EDF0004EC84 /* DZTimesViewController.h */,
 				87076B8916C09EDF0004EC84 /* DZTimesViewController.m */,
 				8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */,
+				87E855F716C23BEC0039E196 /* DZPieViewController.h */,
+				87E855F816C23BEC0039E196 /* DZPieViewController.m */,
 				8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */,
 				875608D016C0B994009AD5D5 /* DZTimeCell.h */,
 				875608D116C0B994009AD5D5 /* DZTimeCell.m */,
@@ -397,6 +406,15 @@
 			path = NSDATE;
 			sourceTree = "<group>";
 		};
+		87E855F216C23BCB0039E196 /* PieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				87E855F316C23BCB0039E196 /* PieChartView.h */,
+				87E855F416C23BCB0039E196 /* PieChartView.m */,
+			);
+			path = PieChartView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,6 +527,8 @@
 				875608F716C11C99009AD5D5 /* NSDate-Utilities.m in Sources */,
 				875608F816C11C99009AD5D5 /* TimeFormatters.m in Sources */,
 				8756090F16C13F1C009AD5D5 /* DZTimeTrackManager.m in Sources */,
+				87E855F516C23BCB0039E196 /* PieChartView.m in Sources */,
+				87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

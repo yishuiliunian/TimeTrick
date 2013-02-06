@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DZTimeCell : UITableViewCell
-@property (nonatomic, strong) DZTime* timer;
-@property (nonatomic, strong) NSTimer* updateTimer;
-@property (nonatomic, strong) UILabel* label;
+@property (nonatomic, strong) NSString* titleText;
+@property (nonatomic, strong) NSString* detailText;
+@property (nonatomic, strong) UIImage* detailImage;
 @end

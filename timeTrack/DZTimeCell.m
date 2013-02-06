@@ -16,8 +16,9 @@
 @end
 
 @implementation DZTimeCell
-@synthesize timer ;
-@synthesize  updateTimer;
+@synthesize detailImage;
+@synthesize detailText;
+@synthesize titleText;
 - (void) dealloc
 {
 }
@@ -30,6 +31,7 @@
     }
     return self;
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

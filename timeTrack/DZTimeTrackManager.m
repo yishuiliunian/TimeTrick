@@ -14,7 +14,13 @@
 
 - (void) startTimeTrack
 {
-    _beginDate = [NSDate date];
+    if ([DZTimeTrackManager isLastTrackFinished]) {
+        _beginDate = [DZTimeTrackManager lastTrackBeginDate];
+    }
+    else
+    {
+        _beginDate = [NSDate date];
+    }
     [[NSUserDefaults standardUserDefaults] setObject:_beginDate forKey:@"beginDate"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -22,13 +28,13 @@
 - (void) stopTimeTrack
 {
     _endDate = [NSDate date];
-    [[NSUserDefaults standardUserDefaults] setNilValueForKey:@"beginDate"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"beginDate"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (BOOL) isLastTrackFinished
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"] == nil;
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"] != nil;
 }
 
 + (NSDate*) lastTrackBeginDate
