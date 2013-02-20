@@ -7,20 +7,23 @@
 //
 
 #import "DZPieViewController.h"
-#import "PieChartView.h"
+#import "PCPieChart.h"
 @interface DZPieViewController ()
 {
-    PieChartView* timePieCharView;
+    PCPieChart* timePieCharView;
 }
 @end
 
+
 @implementation DZPieViewController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        timePieCharView = [[PieChartView alloc] init];
+        timePieCharView = [[PCPieChart alloc] init];
     }
     return self;
 }
@@ -28,30 +31,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSMutableArray *valueArray = [[NSMutableArray alloc] initWithObjects:
-                                  [NSNumber numberWithInt:1],
-                                  [NSNumber numberWithInt:1],
-                                  [NSNumber numberWithInt:1],
-                                  [NSNumber numberWithInt:3],
-                                  [NSNumber numberWithInt:2],
-                                  nil];
+    float (^RandomColorFloat)(void)= ^{
+        return (float)(random()%255/255.0);
+    };
     
-    NSMutableArray *colorArray = [[NSMutableArray alloc] initWithObjects:
-                                  [UIColor blueColor],
-                                  [UIColor redColor],
-                                  [UIColor whiteColor],
-                                  [UIColor greenColor],
-                                  [UIColor purpleColor],
-                                  nil];
-    // 必须先创建一个相同大小的container view，再将PieChartView add上去
-    timePieCharView.mValueArray = [NSMutableArray arrayWithArray:valueArray];
-    timePieCharView.mColorArray = [NSMutableArray arrayWithArray:colorArray];
-    timePieCharView.mInfoTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 350, 300, 80)];
-    timePieCharView.mInfoTextView.backgroundColor = [UIColor clearColor];
-    timePieCharView.mInfoTextView.editable = NO;
-    timePieCharView.mInfoTextView.userInteractionEnabled = NO;
-    timePieCharView.frame = CGRectMake(0.0, 0.0, 320, 300);
+    NSFetchedResultsController* fetchController = [DZTime fetchAllGroupedBy:DZTimeType withPredicate:nil sortedBy:nil ascending:YES];
+   
+    int height = [self.view bounds].size.width/3*2.; // 220;
+    int width = [self.view bounds].size.width; //320;
+    timePieCharView.frame = CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height);
+    [timePieCharView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
+    [timePieCharView setDiameter:width/2];
+    [timePieCharView setSameColorLabel:YES];
     [self.view addSubview:timePieCharView];
+    
+    NSMutableArray* components = [NSMutableArray arrayWithCapacity:5];
+    for (id<NSFetchedResultsSectionInfo> sectionInfo in [fetchController sections]) {
+        float sumSpace = 0.0;
+        for (DZTime* each in [sectionInfo objects]) {
+            float timeSpace = abs([each.dateBegain timeIntervalSinceDate:each.dateEnd]);
+            sumSpace += timeSpace;
+        }
+        if (sumSpace > 0.0) {
+            PCPieComponent* compt = [PCPieComponent pieComponentWithTitle:[sectionInfo name]  value:sumSpace];
+            [compt setColour:[UIColor colorWithRed:RandomColorFloat() green:RandomColorFloat() blue:RandomColorFloat() alpha:1.0]];
+            [components addObject:compt];
+        }
+    }
+    [timePieCharView setComponents:components];
 	// Do any additional setup after loading the view.
 }
 

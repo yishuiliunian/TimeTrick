@@ -15,16 +15,16 @@
 #import "DZPieViewController.h"
 @interface DZTimesViewController ()<JTTableViewGestureAddingRowDelegate>
 {
-    NSMutableArray* timeMArray;
 }
 @property (nonatomic, strong) JTTableViewGestureRecognizer* tableGesturRecognizer;
+@property (nonatomic, strong) NSFetchedResultsController* resultsController;
 @end
 
 @implementation DZTimesViewController
 @synthesize tableGesturRecognizer;
+@synthesize resultsController;
 - (void) gestureRecognizer:(JTTableViewGestureRecognizer *)gestureRecognizer needsAddRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [timeMArray insertObject:@"Add new" atIndex:indexPath.row];
 }
 - (void) gestureRecognizer:(JTTableViewGestureRecognizer *)gestureRecognizer needsCommitRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -34,13 +34,10 @@
 
 - (void) gestureRecognizer:(JTTableViewGestureRecognizer *)gestureRecognizer needsDiscardRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [timeMArray removeObjectAtIndex:indexPath.row];
 }
 
 - (void) updateTime:(NSTimer*)timer
 {
-    DZTime* time = [timeMArray objectAtIndex:0];
-    time.dateEnd = [NSDate date];
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 - (void) didGetShake:(NSNotification*)nc
@@ -59,7 +56,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        timeMArray = [NSMutableArray array];
     }
     return self;
 }
@@ -82,14 +78,12 @@
 
 - (void) reloadAllData
 {
-    [timeMArray removeAllObjects];
-    [timeMArray addObjectsFromArray:[DZTime findAllSortedBy:@"dateBegain" ascending:NO]];
+   self.resultsController = [DZTime fetchAllGroupedBy:DZTimeSectionInditify  withPredicate:nil sortedBy:DZTimeDateBegain  ascending:NO];
     [self.tableView reloadData];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableGesturRecognizer = [self.tableView enableGestureTableViewWithDelegate:self];
     UIBarButtonItem* pieChartIem = [[UIBarButtonItem alloc] initWithTitle:@"pie" style:UIBarButtonItemStyleBordered target:self action:@selector(showThePieChart)];
     self.navigationItem.rightBarButtonItem = pieChartIem;
     if (![DZTimeTrackManager isLastTrackFinished]) {
@@ -106,20 +100,26 @@
 
 #pragma mark - Table view data source
 
+- (NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [[[self.resultsController sections] objectAtIndex:section] name];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [[self.resultsController sections] count];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [timeMArray count];
+    return [[[self.resultsController sections] objectAtIndex:section ] numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    id obj = [timeMArray objectAtIndex:indexPath.row];
+    id obj = [self.resultsController objectAtIndexPath:indexPath];
     if ([obj isKindOfClass:[DZTime class]]) {
         static NSString *CellIdentifier = @"DzTimeCell";
         DZTimeCell *cell = (DZTimeCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -127,7 +127,8 @@
         if (!cell) {
             cell = [[DZTimeCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         }
-        DZTime* timer = [timeMArray objectAtIndex:indexPath.row];
+        DZTime* timer = (DZTime*)obj;
+        NSLog(@"%@",timer.sectionInditify);
         cell.textLabel.text = [NSString stringWithFormat:@"%@ %f", timer.type,[timer.dateEnd timeIntervalSinceDate:timer.dateBegain]];
         
         return cell;

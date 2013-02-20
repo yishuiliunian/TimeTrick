@@ -14,7 +14,7 @@
 
 - (void) startTimeTrack
 {
-    if ([DZTimeTrackManager isLastTrackFinished]) {
+    if (![DZTimeTrackManager isLastTrackFinished]) {
         _beginDate = [DZTimeTrackManager lastTrackBeginDate];
     }
     else
@@ -34,7 +34,7 @@
 
 + (BOOL) isLastTrackFinished
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"] != nil;
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"] == nil;
 }
 
 + (NSDate*) lastTrackBeginDate
