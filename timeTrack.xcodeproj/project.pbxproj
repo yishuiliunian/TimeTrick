@@ -80,6 +80,14 @@
 		870B1C6816D99F430095955C /* toggle_button_r@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5C16D99F420095955C /* toggle_button_r@2x.png */; };
 		870B1C6916D99F430095955C /* toggle_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5D16D99F420095955C /* toggle_button.png */; };
 		870B1C6A16D99F430095955C /* toggle_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5E16D99F430095955C /* toggle_button@2x.png */; };
+		870B1C6C16D9BE110095955C /* dz_backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C6B16D9BE0E0095955C /* dz_backgroud.png */; };
+		870B1C6F16D9BF1A0095955C /* icon_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C6D16D9BF190095955C /* icon_share.png */; };
+		870B1C7016D9BF1A0095955C /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C6E16D9BF190095955C /* icon_share@2x.png */; };
+		870B1C7816D9F83B0095955C /* DZGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C7716D9F83B0095955C /* DZGuidViewController.m */; };
+		870B1C7B16DA07600095955C /* DZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C7A16DA07590095955C /* DZSettingsViewController.m */; };
+		870B1C7E16DA0C9A0095955C /* CloudReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C7D16DA0C110095955C /* CloudReview.m */; };
+		870B1C8116DA114D0095955C /* guide_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C7F16DA114C0095955C /* guide_1.jpg */; };
+		870B1C8216DA114D0095955C /* guide_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C8016DA114D0095955C /* guide_2.jpg */; };
 		8719BD0316D4C91F00098642 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8719BD0016D4C91F00098642 /* PCLineChartView.m */; };
 		8719BD0416D4C91F00098642 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8719BD0216D4C91F00098642 /* PCPieChart.m */; };
 		8719BD0816D4CEEE00098642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8719BD0A16D4CEEE00098642 /* Localizable.strings */; };
@@ -231,6 +239,17 @@
 		870B1C5C16D99F420095955C /* toggle_button_r@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_button_r@2x.png"; sourceTree = "<group>"; };
 		870B1C5D16D99F420095955C /* toggle_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_button.png; sourceTree = "<group>"; };
 		870B1C5E16D99F430095955C /* toggle_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_button@2x.png"; sourceTree = "<group>"; };
+		870B1C6B16D9BE0E0095955C /* dz_backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dz_backgroud.png; sourceTree = "<group>"; };
+		870B1C6D16D9BF190095955C /* icon_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_share.png; sourceTree = "<group>"; };
+		870B1C6E16D9BF190095955C /* icon_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@2x.png"; sourceTree = "<group>"; };
+		870B1C7616D9F83A0095955C /* DZGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZGuidViewController.h; sourceTree = "<group>"; };
+		870B1C7716D9F83B0095955C /* DZGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZGuidViewController.m; sourceTree = "<group>"; };
+		870B1C7916DA07530095955C /* DZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSettingsViewController.h; sourceTree = "<group>"; };
+		870B1C7A16DA07590095955C /* DZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSettingsViewController.m; sourceTree = "<group>"; };
+		870B1C7C16DA0C110095955C /* CloudReview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudReview.h; sourceTree = "<group>"; };
+		870B1C7D16DA0C110095955C /* CloudReview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudReview.m; sourceTree = "<group>"; };
+		870B1C7F16DA114C0095955C /* guide_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_1.jpg; sourceTree = "<group>"; };
+		870B1C8016DA114D0095955C /* guide_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_2.jpg; sourceTree = "<group>"; };
 		8719BCFF16D4C91F00098642 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
 		8719BD0016D4C91F00098642 /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
 		8719BD0116D4C91F00098642 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
@@ -256,8 +275,8 @@
 		875608F416C11C99009AD5D5 /* NSDate-Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
 		875608F516C11C99009AD5D5 /* TimeFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatters.h; sourceTree = "<group>"; };
 		875608F616C11C99009AD5D5 /* TimeFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatters.m; sourceTree = "<group>"; };
-		8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTimeTrackManager.h; sourceTree = "<group>"; };
-		8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTimeTrackManager.m; sourceTree = "<group>"; };
+		8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DZTimeTrackManager.h; path = ../DZTimeTrackManager.h; sourceTree = "<group>"; };
+		8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DZTimeTrackManager.m; path = ../DZTimeTrackManager.m; sourceTree = "<group>"; };
 		878C988F16C931AD00E7B9F2 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		878C989016C931AD00E7B9F2 /* CPTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotation.h; sourceTree = "<group>"; };
 		878C989116C931AD00E7B9F2 /* CPTAnnotationHostLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnnotationHostLayer.h; sourceTree = "<group>"; };
@@ -441,23 +460,24 @@
 				875608F216C11C99009AD5D5 /* NSDATE */,
 				875608E016C100F8009AD5D5 /* JDFlipNumberView */,
 				87076B2816BFE79B0004EC84 /* MagicalRecord */,
-				87076B0116BF760E0004EC84 /* DZAppDelegate.h */,
 				875608EC16C10126009AD5D5 /* DZTrackTimeViewController.h */,
 				875608ED16C10127009AD5D5 /* DZTrackTimeViewController.m */,
 				870B1BD116D84DE10095955C /* DZTimePickViewController.h */,
 				870B1BD216D84DE20095955C /* DZTimePickViewController.m */,
+				87076B0116BF760E0004EC84 /* DZAppDelegate.h */,
 				87076B0216BF760E0004EC84 /* DZAppDelegate.m */,
+				870B1C7916DA07530095955C /* DZSettingsViewController.h */,
+				870B1C7A16DA07590095955C /* DZSettingsViewController.m */,
 				87076B9816C0AE6A0004EC84 /* DZShakeWindow.h */,
 				87076B9916C0AE6A0004EC84 /* DZShakeWindow.m */,
 				87076B8816C09EDF0004EC84 /* DZTimesViewController.h */,
 				87076B8916C09EDF0004EC84 /* DZTimesViewController.m */,
 				87E855F716C23BEC0039E196 /* DZPieViewController.h */,
 				87E855F816C23BEC0039E196 /* DZPieViewController.m */,
-				8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */,
-				8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */,
 				875608D016C0B994009AD5D5 /* DZTimeCell.h */,
 				875608D116C0B994009AD5D5 /* DZTimeCell.m */,
 				870B1BD616D8B0ED0095955C /* DZGlobals.h */,
+				870B1C6B16D9BE0E0095955C /* dz_backgroud.png */,
 				870B1BD716D8B0EE0095955C /* DZGlobals.m */,
 				87076AF916BF760E0004EC84 /* Supporting Files */,
 				870B1BC516D7B48A0095955C /* DZSettings.h */,
@@ -469,6 +489,10 @@
 		87076AF916BF760E0004EC84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				870B1C7F16DA114C0095955C /* guide_1.jpg */,
+				870B1C8016DA114D0095955C /* guide_2.jpg */,
+				870B1C6D16D9BF190095955C /* icon_share.png */,
+				870B1C6E16D9BF190095955C /* icon_share@2x.png */,
 				870B1C5316D99F3E0095955C /* left_button_off@2x.png */,
 				870B1C5416D99F3E0095955C /* left_button_on@2x.png */,
 				870B1C5516D99F3E0095955C /* right_button_off@2x.png */,
@@ -498,6 +522,10 @@
 		87076B2816BFE79B0004EC84 /* MagicalRecord */ = {
 			isa = PBXGroup;
 			children = (
+				870B1C7C16DA0C110095955C /* CloudReview.h */,
+				870B1C7D16DA0C110095955C /* CloudReview.m */,
+				870B1C7616D9F83A0095955C /* DZGuidViewController.h */,
+				870B1C7716D9F83B0095955C /* DZGuidViewController.m */,
 				87076B2916BFE79B0004EC84 /* Categories */,
 				87076B5316BFE79B0004EC84 /* Core */,
 				87076B6316BFE79B0004EC84 /* CoreData+MagicalRecord.h */,
@@ -654,6 +682,8 @@
 				875608E716C100F8009AD5D5 /* JDGroupedFlipNumberView.m */,
 				875608EF16C102D7009AD5D5 /* DZFlipDateView.h */,
 				875608F016C102D7009AD5D5 /* DZFlipDateView.m */,
+				8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */,
+				8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */,
 			);
 			path = JDFlipNumberView;
 			sourceTree = "<group>";
@@ -877,6 +907,11 @@
 				870B1C6816D99F430095955C /* toggle_button_r@2x.png in Resources */,
 				870B1C6916D99F430095955C /* toggle_button.png in Resources */,
 				870B1C6A16D99F430095955C /* toggle_button@2x.png in Resources */,
+				870B1C6C16D9BE110095955C /* dz_backgroud.png in Resources */,
+				870B1C6F16D9BF1A0095955C /* icon_share.png in Resources */,
+				870B1C7016D9BF1A0095955C /* icon_share@2x.png in Resources */,
+				870B1C8116DA114D0095955C /* guide_1.jpg in Resources */,
+				870B1C8216DA114D0095955C /* guide_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +922,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870B1C7E16DA0C9A0095955C /* CloudReview.m in Sources */,
 				870B1BDE16D8B7720095955C /* DZTimeTableviewCell.m in Sources */,
 				87FAB84316D7A68200169B68 /* TimeScroller.m in Sources */,
 				87076AFF16BF760E0004EC84 /* main.m in Sources */,
@@ -949,6 +985,8 @@
 				870B1C5016D99C2C0095955C /* ToggleBase.m in Sources */,
 				870B1C5116D99C2C0095955C /* ToggleButton.m in Sources */,
 				870B1C5216D99C2C0095955C /* ToggleView.m in Sources */,
+				870B1C7816D9F83B0095955C /* DZGuidViewController.m in Sources */,
+				870B1C7B16DA07600095955C /* DZSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1084,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "timeTrack/timeTrack-Prefix.pch";
 				INFOPLIST_FILE = "timeTrack/timeTrack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
@@ -1071,7 +1109,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "timeTrack/timeTrack-Prefix.pch";
 				INFOPLIST_FILE = "timeTrack/timeTrack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",

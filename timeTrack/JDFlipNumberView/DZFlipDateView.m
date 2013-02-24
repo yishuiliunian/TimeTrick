@@ -20,8 +20,7 @@ typedef enum {
 {
     NSArray* flipDataViewArray;
 }
-@property (nonatomic, strong) NSDate* beginDate;
-@property (nonatomic, strong) NSDate* endDate;
+
 @end
 @implementation DZFlipDateView
 @synthesize beginDate;
@@ -37,6 +36,11 @@ typedef enum {
     }
 }
 
+- (void) setBeginDate:(NSDate *)beginDate_
+{
+    beginDate = beginDate_;
+    self.timeTrackManager.beginDate = beginDate_;
+}
 
 - (void) setFrame:(CGRect)frame
 {
@@ -151,15 +155,17 @@ NSUInteger (^flipCurrentNumber)(NSArray*,DZFlipDateViewTag) = ^(NSArray* array, 
 }
 - (void) pasueTrack
 {
+    [self resetFlipViewDate:beginDate toEnd:endDate];
    [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] stopAnimation]; 
 }
 - (void) resumeTrack
 {
+    [self resetFlipViewDate:beginDate toEnd:endDate];
    [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] animateUpWithTimeInterval:1];
 }
 - (void) groupedFlipNumberView:(JDGroupedFlipNumberView *)groupedFlipNumberView willChangeToValue:(NSUInteger)newValue
 {
-    endDate = [NSDate dateWithTimeInterval:1 sinceDate:beginDate];
+    endDate = [NSDate dateWithTimeInterval:1 sinceDate:endDate];
     JDGroupedFlipNumberView* animateView = nil;
     if (groupedFlipNumberView.tag == DZFlipDateViewSecond) {
         animateView = [flipDataViewArray objectAtIndex:DZFlipDateViewMinutes%1000];

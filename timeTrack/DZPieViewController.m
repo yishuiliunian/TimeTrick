@@ -58,7 +58,7 @@
 }
 - (void) shareThisChart
 {
-    id publishContent = [ShareSDK publishContent:@"我在使用时间分析apple来追踪我的时间，快来看看吧。"
+    id publishContent = [ShareSDK publishContent:@"我在使用\"时间分析\"这个应用来追踪我的时间，快来看看吧。"
                                  defaultContent:@""
                                            image:[self glToUIImage]
                                    imageQuality:0.8
@@ -74,18 +74,19 @@
                            content:publishContent
                      statusBarTips:YES
                    oneKeyShareList:[NSArray defaultOneKeyShareList]
-                    shareViewStyle:ShareViewStyleAppRecommend
+                    shareViewStyle:ShareViewStyleSimple
                     shareViewTitle:@"内容分享"
                             result:^(ShareType type, SSPublishContentState state, id<ISSStatusInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
                                 if (state == SSPublishContentStateSuccess)
                                 {
-                                    NSLog(@"成功!");
+                                   
                                 }
                                 else if(state == SSPublishContentStateFail)
                                 {
                                     NSLog(@"失败!");
                                 }
                             }];
+    
 }
 - (void)viewDidLoad
 {
@@ -94,8 +95,8 @@
     float (^RandomColorFloat)(void)= ^{
         return (float)(random()%255/255.0);
     };
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(shareThisChart)];
-
+    UIBarButtonItem* shareItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Share", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(shareThisChart)];
+    self.navigationItem.rightBarButtonItem = shareItem;
     NSFetchedResultsController* fetchController = [DZTime fetchAllGroupedBy:DZTimeType withPredicate:nil sortedBy:DZTimeDateBegain ascending:YES];
    
     int height = [self.view bounds].size.height - 30; // 220;
@@ -111,9 +112,12 @@
         float sumSpace = 0.0;
         for (DZTime* each in [sectionInfo objects]) {
             float timeSpace = abs([each.dateBegain timeIntervalSinceDate:each.dateEnd]);
+            if (timeSpace <0.0001) {
+                timeSpace = 1;
+            }
             sumSpace += timeSpace;
         }
-        if (sumSpace > 0.0) {
+        if (sumSpace > 0.0001) {
             PCPieComponent* compt = [PCPieComponent pieComponentWithTitle:NSLocalizedString([sectionInfo name],nil)  value:sumSpace];
             [compt setColour:[UIColor colorWithRed:RandomColorFloat() green:RandomColorFloat() blue:RandomColorFloat() alpha:1.0]];
             [components addObject:compt];

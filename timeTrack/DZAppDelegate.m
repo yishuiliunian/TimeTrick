@@ -11,11 +11,14 @@
 #import "DZShakeWindow.h"
 #import "PrettyNavigationBar.h"
 #import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import "DZGuidViewController.h"
 static NSString* const ShareSDKKey = @"a670cbbfa8";
 @implementation DZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [WXApi registerApp:@"wx4e163efac64d5c2d"];
     
     [ShareSDK registerApp:ShareSDKKey];
     
@@ -28,6 +31,16 @@ static NSString* const ShareSDKKey = @"a670cbbfa8";
     [controller setValue:prettyNav forKey:@"navigationBar"];
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
+   //
+    BOOL first = [[NSUserDefaults standardUserDefaults] boolForKey:@"first"];
+    if (!first) {
+        DZGuidViewController* guidCon = [[DZGuidViewController alloc] init];
+        UINavigationController* guidNav = [[UINavigationController alloc] initWithRootViewController:guidCon];
+        [controller presentModalViewController:guidNav animated:YES];
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:first forKey:@"first"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    //
     return YES;
 }
 
@@ -41,7 +54,15 @@ static NSString* const ShareSDKKey = @"a670cbbfa8";
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
+- (BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url wxDelegate:self];
+}
 
+- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url wxDelegate:self];
+}
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.

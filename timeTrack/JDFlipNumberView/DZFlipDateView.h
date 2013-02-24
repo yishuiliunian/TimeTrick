@@ -11,6 +11,8 @@
 #import "DZTimeTrackManager.h"
 @interface DZFlipDateView : UIView
 @property (nonatomic, strong, readonly) DZTimeTrackManager* timeTrackManager;
+@property (nonatomic, strong) NSDate* beginDate;
+@property (nonatomic, strong) NSDate* endDate;
 - (void) startTrack;
 - (void) stopTrack;
 - (void) pasueTrack;

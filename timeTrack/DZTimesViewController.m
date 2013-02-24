@@ -15,6 +15,7 @@
 #import "PrettyShadowPlainTableview.h"
 #import "PrettyDrawing.h"
 #import "DZTimeTableviewCell.h"
+#import "DZSettingsViewController.h"
 static CGFloat DZtimeTableViewCellHeight = 70;
 #define start_color [UIColor colorWithHex:0xEEEEEE]
 #define end_color [UIColor colorWithHex:0xDEDEDE]
@@ -44,16 +45,18 @@ static CGFloat DZtimeTableViewCellHeight = 70;
     
 }
 @end
-@interface DZTimesViewController () <TimeScrollerDelegate,UIScrollViewDelegate>
+@interface DZTimesViewController () <TimeScrollerDelegate,UIScrollViewDelegate, NSFetchedResultsControllerDelegate>
 {
     TimeScroller* _timeScroller;
 }
 @property (nonatomic, strong) NSFetchedResultsController* resultsController;
+@property (nonatomic, assign) NSInteger sectionCount;
 @end
+
 
 @implementation DZTimesViewController
 @synthesize resultsController;
-
+@synthesize sectionCount;
 
 - (UITableView *)tableViewForTimeScroller:(TimeScroller *)timeScroller
 {
@@ -72,12 +75,17 @@ static CGFloat DZtimeTableViewCellHeight = 70;
 
 - (void) didGetShake:(NSNotification*)nc
 {
-    [self addNewTimeTrack];
+    DZSettingsViewController* settingCon = [[DZSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController* navCon = [[UINavigationController alloc] initWithRootViewController:settingCon];
+    PrettyNavigationBar* navBar = [[PrettyNavigationBar alloc] init];
+    [navCon setValue:navBar forKey:@"navigationBar"];
+    [self.navigationController presentModalViewController:navCon animated:YES];
 }
 
 - (void) showThePieChart
 {
     DZPieViewController* pieChart = [[DZPieViewController alloc] init];
+    
     [self.navigationController pushViewController:pieChart animated:YES];
 }
         
@@ -94,7 +102,6 @@ static CGFloat DZtimeTableViewCellHeight = 70;
 {
     [super viewWillAppear:animated];
     [self reloadAllData];
-    [self.tableView reloadData];
 }
 - (void) viewDidAppear:(BOOL)animated
 {
@@ -107,36 +114,41 @@ static CGFloat DZtimeTableViewCellHeight = 70;
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-- (void) reloadAllData
+- (void) showDzSay
 {
-   self.resultsController = [DZTime fetchAllGroupedBy:DZTimeSectionInditify  withPredicate:nil sortedBy:DZTimeDateBegain  ascending:NO];
-    [self.tableView reloadData];
     DZLabel* headerLabel = [[DZLabel alloc] initWithFrame:CGRectMake(10, 100, CGRectGetWidth(self.view.frame)-20, 100)];
     headerLabel.textAlignment = UITextAlignmentCenter;
     self.tableView.contentInset = UIEdgeInsetsMake(-100, 0.0, 0,0);
     headerLabel.numberOfLines = 0;
     headerLabel.shadowColor = [UIColor whiteColor];
     headerLabel.shadowOffset = CGSizeMake(0.5, 0.5);
-
+    
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.text = @"所谓修行即是做一件简单的事情\n并持之以恒";
     if ([[self.resultsController fetchedObjects] count]) {
-         self.tableView.tableHeaderView = headerLabel;
+        self.tableView.tableHeaderView = headerLabel;
         self.tableView.backgroundView = nil;
     }
     else
     {
         self.tableView.backgroundView = headerLabel;
+        self.tableView.tableHeaderView = nil;
     }
-   
+ 
+}
+- (void) reloadAllData
+{
+   self.resultsController = [DZTime fetchAllGroupedBy:DZTimeSectionInditify  withPredicate:nil sortedBy:DZTimeDateBegain  ascending:NO];
+    self.resultsController.delegate = self;
+    [self.tableView reloadData];
+    [self showDzSay];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-   
+    self.title = NSLocalizedString(@"Time Is Gold", nil);
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]];
     [PrettyShadowPlainTableview setUpTableView:self.tableView];
     UIBarButtonItem* pieChartIem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Analyze", ) style:UIBarButtonItemStyleBordered target:self action:@selector(showThePieChart)];
@@ -146,7 +158,6 @@ static CGFloat DZtimeTableViewCellHeight = 70;
         DZTrackTimeViewController* trackView = [[DZTrackTimeViewController alloc] init];
         [self.navigationController pushViewController:trackView animated:YES];
     }
-    
     
     
 }
@@ -232,29 +243,43 @@ static CGFloat DZtimeTableViewCellHeight = 70;
     cell.dzTime = timer;
     return cell;
 }
-
-/*
+- (void) controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    if (NSFetchedResultsChangeDelete == type) {
+        if (self.sectionCount == [[controller sections] count]) {
+                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+        else
+        {
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self showDzSay];
+        }
+    }
+}
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        self.sectionCount = [[self.resultsController sections] count];
+        DZTime* timer = [self.resultsController objectAtIndexPath:indexPath];
+        if ([timer deleteEntity]) {
+            NSLog(@"xxxx");
+        }
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+    
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

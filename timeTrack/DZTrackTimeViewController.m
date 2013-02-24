@@ -15,7 +15,7 @@
 #import "PrettyToolbar.h"
 #import "DZTimePickViewController.h"
 #import "ToggleView.h"
-
+#import "NSDate-Utilities.h"
 @interface DZTrackTimeViewController () <UIPickerViewDataSource, UIPickerViewDelegate, DZTimePickViewDelegate,ToggleViewDelegate>
 {
     DZFlipDateView* dateFlipView;
@@ -30,10 +30,6 @@
 
 @implementation DZTrackTimeViewController
 @synthesize timeData;
-- (DZTime*) currentTimeData
-{
-    return self.timeData;
-}
 - (void) dealloc
 {
     [self.view removeKeyboardControl];
@@ -42,8 +38,8 @@
 
 - (void) setBeginDate:(NSDate *)beginDate endDate:(NSDate *)endDate
 {
-    dateFlipView.timeTrackManager.endDate = endDate;
-    dateFlipView.timeTrackManager.beginDate = beginDate;
+    dateFlipView.beginDate= beginDate;
+    dateFlipView.endDate = endDate;
     [toggleSwitchView setSelectedButton:ToggleButtonSelectedLeft];
 }
 
@@ -58,7 +54,7 @@
 }
 - (void) didGetShake:(NSNotification*)nc
 {
-    [self saveTime];
+    [dateFlipView stopTrack];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -87,8 +83,6 @@
         dateFlipView = [[DZFlipDateView alloc] init];
         pickView = [[UIPickerView alloc] init];
         pickView.showsSelectionIndicator = YES;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didGetShake:) name:@"shake" object:nil];
-        timeData = [DZTime createEntity];
     }
     return self;
 }
@@ -108,15 +102,18 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [dateFlipView resetFlipViewDate:dateFlipView.timeTrackManager.beginDate toEnd:dateFlipView.timeTrackManager.endDate?dateFlipView.timeTrackManager.endDate:[NSDate date]];
-    
 }
 - (void) viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didGetShake:) name:@"shake" object:nil];
+}
 - (NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (row == 0) {
@@ -158,10 +155,14 @@
 }
 - (void) saveTime
 {
+    self.timeData = [DZTime createEntity];
     self.timeData.dateBegain = dateFlipView.timeTrackManager.beginDate;
-    self.timeData.dateEnd = dateFlipView.timeTrackManager.endDate;
+    self.timeData.dateEnd = dateFlipView.endDate;
     if (self.timeData.dateEnd == nil) {
         self.timeData.dateEnd = [NSDate date];
+    }
+    if ([self.timeData.dateBegain isLaterThanDate:self.timeData.dateEnd]) {
+        self.timeData.dateEnd = [NSDate dateWithTimeInterval:1 sinceDate:self.timeData.dateBegain];
     }
     self.timeData.type = [timeKinds objectAtIndex:[pickView selectedRowInComponent:0]-1];
     [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
@@ -173,6 +174,7 @@
 {
     [super viewDidLoad];
     //
+    self.title = NSLocalizedString(@"Tracking...", nil);
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveTime)];
     //
@@ -185,11 +187,10 @@
     toggleSwitchView = [[ToggleView alloc]initWithFrame:switchFrame toggleViewType:ToggleViewTypeNoLabel toggleBaseType:ToggleBaseTypeChangeImage toggleButtonType:ToggleButtonTypeChangeImage];
     toggleSwitchView.toggleDelegate = self;
     [self.view addSubview:toggleSwitchView];
-    
+    [dateFlipView startTrack];
+
     [toggleSwitchView setSelectedButton:ToggleButtonSelectedRight];
     //
-    [dateFlipView startTrack];
-    self.timeData.dateBegain = dateFlipView.timeTrackManager.beginDate;
     
     pickView.frame = CGRectMake(0.0, CGRectGetHeight(self.view.frame)-162, CGRectGetWidth(self.view.frame), 162);
     [self.view addSubview:pickView];
@@ -226,4 +227,5 @@
 {
     [dateFlipView resumeTrack];
 }
+
 @end

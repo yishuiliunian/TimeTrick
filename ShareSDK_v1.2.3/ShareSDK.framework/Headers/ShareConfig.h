@@ -16,9 +16,9 @@
 #pragma mark - 新浪微博应用配置信息
 //http://open.weibo.com上注册新浪微博开放平台应用，并将相关信息填写到以下字段
 
-NSString *ssSinaAppKey = @"3201194191";
-NSString *ssSinaAppSecret = @"0334252914651e8f76bad63337b3b78f";
-NSString *ssSinaRedirectUri = @"http://appgo.cn";
+NSString *ssSinaAppKey = @"1520711649";
+NSString *ssSinaAppSecret = @"10c0f8230609745198e3ebe1ead97cb3";
+NSString *ssSinaRedirectUri = @"http://www.wiz.cn";
 
 #pragma mark - 腾讯微博应用配置信息
 //http://dev.t.qq.com上注册腾讯微博开放平台应用，并将相关信息填写到以下字段
