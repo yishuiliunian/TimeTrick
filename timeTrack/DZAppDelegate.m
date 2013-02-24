@@ -12,6 +12,7 @@
 #import "PrettyNavigationBar.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
+#import "CloudReview.h"
 #import "DZGuidViewController.h"
 static NSString* const ShareSDKKey = @"a670cbbfa8";
 @implementation DZAppDelegate
@@ -32,18 +33,24 @@ static NSString* const ShareSDKKey = @"a670cbbfa8";
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
    //
-    BOOL first = [[NSUserDefaults standardUserDefaults] boolForKey:@"first"];
+    BOOL first = [[NSUserDefaults standardUserDefaults] boolForKey:@"notShowAgain"];
     if (!first) {
         DZGuidViewController* guidCon = [[DZGuidViewController alloc] init];
         UINavigationController* guidNav = [[UINavigationController alloc] initWithRootViewController:guidCon];
         [controller presentModalViewController:guidNav animated:YES];
     }
-    [[NSUserDefaults standardUserDefaults] setBool:first forKey:@"first"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"notShowAgain"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     //
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(rateTheTimeTrack) userInfo:nil repeats:NO];
     return YES;
 }
-
+- (void) rateTheTimeTrack
+{
+    if ([CloudReview canRate]) {
+        [[CloudReview sharedReview] reviewFor:607603885];
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     

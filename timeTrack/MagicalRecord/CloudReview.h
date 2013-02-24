@@ -13,5 +13,6 @@
 }  
 +(CloudReview*)sharedReview;  
 -(void) reviewFor:(int)appleID;  
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;  
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
++ (BOOL) canRate;
 @end 

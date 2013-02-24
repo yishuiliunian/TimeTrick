@@ -157,7 +157,12 @@
         return (BOOL)(indexPath.section == section && row == indexPath.row);
     };
     if (indexPathIsEqual(1, 0)) {
-        [[CloudReview sharedReview] reviewFor:607603885];
+        NSString *str = [NSString stringWithFormat:
+                         @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",
+                         607603885 ];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"neverRate"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else if (indexPathIsEqual(0,0))
     {
