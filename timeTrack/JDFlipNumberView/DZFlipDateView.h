@@ -13,4 +13,7 @@
 @property (nonatomic, strong, readonly) DZTimeTrackManager* timeTrackManager;
 - (void) startTrack;
 - (void) stopTrack;
+- (void) pasueTrack;
+- (void) resumeTrack;
+- (void) resetFlipViewDate:(NSDate*)beginDate toEnd:(NSDate*)endDate;
 @end

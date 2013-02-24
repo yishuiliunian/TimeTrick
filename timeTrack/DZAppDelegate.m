@@ -9,16 +9,23 @@
 #import "DZAppDelegate.h"
 #import "DZTimesViewController.h"
 #import "DZShakeWindow.h"
+#import "PrettyNavigationBar.h"
+#import <ShareSDK/ShareSDK.h>
+static NSString* const ShareSDKKey = @"a670cbbfa8";
 @implementation DZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [ShareSDK registerApp:ShareSDKKey];
+    
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"aa.sqlite"];
     self.window = [[DZShakeWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     DZTimesViewController* viewController = [[DZTimesViewController alloc]init];
     UINavigationController* controller = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
+    PrettyNavigationBar* prettyNav = [[PrettyNavigationBar alloc] init];
+    [controller setValue:prettyNav forKey:@"navigationBar"];
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     return YES;

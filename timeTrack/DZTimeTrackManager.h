@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DZTimeTrackManager : NSObject
-@property (nonatomic, strong, readonly) NSDate* beginDate;
-@property (nonatomic, strong, readonly) NSDate* endDate;
+@property (nonatomic, strong) NSDate* beginDate;
+@property (nonatomic, strong) NSDate* endDate;
 - (void) startTimeTrack;
 - (void) stopTimeTrack;
 + (BOOL) isLastTrackFinished;

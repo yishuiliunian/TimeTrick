@@ -396,7 +396,6 @@ static NSString* kFlipAnimationKey = @"kFlipAnimationKey";
 - (void) animateUpWithTimeInterval: (NSTimeInterval) timeInterval
 {	
 	timeInterval = MAX(timeInterval, 0.001);
-	
 	[self stopAnimation];
 	mTimer = [[NSTimer scheduledTimerWithTimeInterval: timeInterval target: self selector: @selector(animateToNextNumber) userInfo: nil repeats: YES] retain];
 }

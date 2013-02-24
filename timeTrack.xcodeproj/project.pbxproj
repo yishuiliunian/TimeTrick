@@ -47,12 +47,42 @@
 		87076B7D16BFE79B0004EC84 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 87076B6116BFE79B0004EC84 /* MagicalRecord.m */; };
 		87076B8A16C09EE00004EC84 /* DZTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87076B8916C09EDF0004EC84 /* DZTimesViewController.m */; };
 		87076B9A16C0AE6B0004EC84 /* DZShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 87076B9916C0AE6A0004EC84 /* DZShakeWindow.m */; };
+		870B1BC716D7B48A0095955C /* DZSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1BC616D7B48A0095955C /* DZSettings.m */; };
+		870B1BCB16D7C3E90095955C /* DAKeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1BCA16D7C3E90095955C /* DAKeyboardControl.m */; };
+		870B1BD316D84DE20095955C /* DZTimePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1BD216D84DE20095955C /* DZTimePickViewController.m */; };
+		870B1BD816D8B0EF0095955C /* DZGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1BD716D8B0EE0095955C /* DZGlobals.m */; };
+		870B1BDE16D8B7720095955C /* DZTimeTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1BDD16D8B7030095955C /* DZTimeTableviewCell.m */; };
+		870B1BE116D8C2CE0095955C /* WhatIsLARK_DottedLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BDF16D8C2CA0095955C /* WhatIsLARK_DottedLine.png */; };
+		870B1BE216D8C2CE0095955C /* WhatIsLARK_DottedLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BE016D8C2CC0095955C /* WhatIsLARK_DottedLine@2x.png */; };
+		870B1BE516D8C47A0095955C /* HistoryCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BE316D8C4790095955C /* HistoryCellBackground.png */; };
+		870B1BE616D8C47A0095955C /* HistoryCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BE416D8C4790095955C /* HistoryCellBackground@2x.png */; };
+		870B1BF416D914050095955C /* AGCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BEA16D914040095955C /* AGCommon.framework */; };
+		870B1BF516D914050095955C /* ShareSDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BEB16D914040095955C /* ShareSDKLocalizable.strings */; };
+		870B1BF616D914050095955C /* QQApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BED16D914040095955C /* QQApi.framework */; };
+		870B1BF716D914050095955C /* libWeChatSDK_armv7_armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BEF16D914040095955C /* libWeChatSDK_armv7_armv7s.a */; };
+		870B1BF816D914050095955C /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 870B1BF216D914050095955C /* ShareSDK.bundle */; };
+		870B1BF916D914050095955C /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BF316D914050095955C /* ShareSDK.framework */; };
+		870B1BFB16D914D80095955C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BFA16D914D70095955C /* MessageUI.framework */; };
+		870B1BFD16D9150E0095955C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BFC16D9150C0095955C /* SystemConfiguration.framework */; };
+		870B1BFF16D915480095955C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 870B1BFE16D915460095955C /* libicucore.dylib */; };
+		870B1C5016D99C2C0095955C /* ToggleBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C4B16D99C2C0095955C /* ToggleBase.m */; };
+		870B1C5116D99C2C0095955C /* ToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C4D16D99C2C0095955C /* ToggleButton.m */; };
+		870B1C5216D99C2C0095955C /* ToggleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 870B1C4F16D99C2C0095955C /* ToggleView.m */; };
+		870B1C5F16D99F430095955C /* left_button_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5316D99F3E0095955C /* left_button_off@2x.png */; };
+		870B1C6016D99F430095955C /* left_button_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5416D99F3E0095955C /* left_button_on@2x.png */; };
+		870B1C6116D99F430095955C /* right_button_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5516D99F3E0095955C /* right_button_off@2x.png */; };
+		870B1C6216D99F430095955C /* right_button_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5616D99F3F0095955C /* right_button_on@2x.png */; };
+		870B1C6316D99F430095955C /* toggle_base_l@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5716D99F400095955C /* toggle_base_l@2x.png */; };
+		870B1C6416D99F430095955C /* toggle_base_r@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5816D99F400095955C /* toggle_base_r@2x.png */; };
+		870B1C6516D99F430095955C /* toggle_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5916D99F400095955C /* toggle_base.png */; };
+		870B1C6616D99F430095955C /* toggle_base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5A16D99F410095955C /* toggle_base@2x.png */; };
+		870B1C6716D99F430095955C /* toggle_button_l@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5B16D99F410095955C /* toggle_button_l@2x.png */; };
+		870B1C6816D99F430095955C /* toggle_button_r@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5C16D99F420095955C /* toggle_button_r@2x.png */; };
+		870B1C6916D99F430095955C /* toggle_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5D16D99F420095955C /* toggle_button.png */; };
+		870B1C6A16D99F430095955C /* toggle_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870B1C5E16D99F430095955C /* toggle_button@2x.png */; };
 		8719BD0316D4C91F00098642 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8719BD0016D4C91F00098642 /* PCLineChartView.m */; };
 		8719BD0416D4C91F00098642 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8719BD0216D4C91F00098642 /* PCPieChart.m */; };
-		875608C916C0B550009AD5D5 /* JTTableViewGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608C316C0B550009AD5D5 /* JTTableViewGestureRecognizer.m */; };
-		875608CA16C0B550009AD5D5 /* JTTransformableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608C516C0B550009AD5D5 /* JTTransformableTableViewCell.m */; };
-		875608CB16C0B550009AD5D5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 875608C616C0B550009AD5D5 /* LICENSE */; };
-		875608CC16C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608C816C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.m */; };
+		8719BD0816D4CEEE00098642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8719BD0A16D4CEEE00098642 /* Localizable.strings */; };
 		875608CF16C0B6D2009AD5D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875608CE16C0B6D2009AD5D5 /* QuartzCore.framework */; };
 		875608D216C0B995009AD5D5 /* DZTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608D116C0B994009AD5D5 /* DZTimeCell.m */; };
 		875608E816C100F8009AD5D5 /* JDDateCountdownFlipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608E216C100F8009AD5D5 /* JDDateCountdownFlipView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -65,8 +95,20 @@
 		875608F816C11C99009AD5D5 /* TimeFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608F616C11C99009AD5D5 /* TimeFormatters.m */; };
 		8756090F16C13F1C009AD5D5 /* DZTimeTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */; };
 		878C98DA16C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C98D916C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a */; };
-		87E855F516C23BCB0039E196 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F416C23BCB0039E196 /* PieChartView.m */; };
 		87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F816C23BEC0039E196 /* DZPieViewController.m */; };
+		87FAB7EA16D774AC00169B68 /* TT-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7E916D774AC00169B68 /* TT-02.png */; };
+		87FAB7EC16D774B300169B68 /* TT-01-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7EB16D774B300169B68 /* TT-01-01.png */; };
+		87FAB83716D788BD00169B68 /* PrettyCustomViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB82516D788BD00169B68 /* PrettyCustomViewTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83816D788BD00169B68 /* PrettyGridTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB82716D788BD00169B68 /* PrettyGridTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83916D788BD00169B68 /* PrettySegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB82916D788BD00169B68 /* PrettySegmentedControlTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83A16D788BD00169B68 /* PrettyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB82B16D788BD00169B68 /* PrettyTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83B16D788BD00169B68 /* PrettyDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB82D16D788BD00169B68 /* PrettyDrawing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83C16D788BD00169B68 /* PrettyNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB83016D788BD00169B68 /* PrettyNavigationBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83D16D788BD00169B68 /* PrettyShadowPlainTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB83216D788BD00169B68 /* PrettyShadowPlainTableview.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83E16D788BD00169B68 /* PrettyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB83416D788BD00169B68 /* PrettyTabBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB83F16D788BD00169B68 /* PrettyToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB83616D788BD00169B68 /* PrettyToolbar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87FAB84316D7A68200169B68 /* TimeScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB84216D7932000169B68 /* TimeScroller.m */; };
+		87FAB84716D7A86300169B68 /* TimeScroller.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB84616D7A86200169B68 /* TimeScroller.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,17 +187,57 @@
 		87076B8916C09EDF0004EC84 /* DZTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTimesViewController.m; sourceTree = "<group>"; };
 		87076B9816C0AE6A0004EC84 /* DZShakeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZShakeWindow.h; sourceTree = "<group>"; };
 		87076B9916C0AE6A0004EC84 /* DZShakeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZShakeWindow.m; sourceTree = "<group>"; };
+		870B1BC516D7B48A0095955C /* DZSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSettings.h; sourceTree = "<group>"; };
+		870B1BC616D7B48A0095955C /* DZSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSettings.m; sourceTree = "<group>"; };
+		870B1BC916D7C3E90095955C /* DAKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAKeyboardControl.h; sourceTree = "<group>"; };
+		870B1BCA16D7C3E90095955C /* DAKeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAKeyboardControl.m; sourceTree = "<group>"; };
+		870B1BD116D84DE10095955C /* DZTimePickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTimePickViewController.h; sourceTree = "<group>"; };
+		870B1BD216D84DE20095955C /* DZTimePickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTimePickViewController.m; sourceTree = "<group>"; };
+		870B1BD616D8B0ED0095955C /* DZGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZGlobals.h; sourceTree = "<group>"; };
+		870B1BD716D8B0EE0095955C /* DZGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZGlobals.m; sourceTree = "<group>"; };
+		870B1BDC16D8B7030095955C /* DZTimeTableviewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZTimeTableviewCell.h; sourceTree = "<group>"; };
+		870B1BDD16D8B7030095955C /* DZTimeTableviewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZTimeTableviewCell.m; sourceTree = "<group>"; };
+		870B1BDF16D8C2CA0095955C /* WhatIsLARK_DottedLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhatIsLARK_DottedLine.png; sourceTree = "<group>"; };
+		870B1BE016D8C2CC0095955C /* WhatIsLARK_DottedLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhatIsLARK_DottedLine@2x.png"; sourceTree = "<group>"; };
+		870B1BE316D8C4790095955C /* HistoryCellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryCellBackground.png; sourceTree = "<group>"; };
+		870B1BE416D8C4790095955C /* HistoryCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryCellBackground@2x.png"; sourceTree = "<group>"; };
+		870B1BEA16D914040095955C /* AGCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AGCommon.framework; sourceTree = "<group>"; };
+		870B1BEC16D914040095955C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ShareSDKLocalizable.strings; sourceTree = "<group>"; };
+		870B1BED16D914040095955C /* QQApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQApi.framework; sourceTree = "<group>"; };
+		870B1BEF16D914040095955C /* libWeChatSDK_armv7_armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK_armv7_armv7s.a; sourceTree = "<group>"; };
+		870B1BF016D914040095955C /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		870B1BF116D914040095955C /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		870B1BF216D914050095955C /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
+		870B1BF316D914050095955C /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
+		870B1BFA16D914D70095955C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		870B1BFC16D9150C0095955C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		870B1BFE16D915460095955C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		870B1C0016D91C550095955C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		870B1C4A16D99C2C0095955C /* ToggleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleBase.h; sourceTree = "<group>"; };
+		870B1C4B16D99C2C0095955C /* ToggleBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleBase.m; sourceTree = "<group>"; };
+		870B1C4C16D99C2C0095955C /* ToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleButton.h; sourceTree = "<group>"; };
+		870B1C4D16D99C2C0095955C /* ToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleButton.m; sourceTree = "<group>"; };
+		870B1C4E16D99C2C0095955C /* ToggleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleView.h; sourceTree = "<group>"; };
+		870B1C4F16D99C2C0095955C /* ToggleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleView.m; sourceTree = "<group>"; };
+		870B1C5316D99F3E0095955C /* left_button_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_button_off@2x.png"; sourceTree = "<group>"; };
+		870B1C5416D99F3E0095955C /* left_button_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_button_on@2x.png"; sourceTree = "<group>"; };
+		870B1C5516D99F3E0095955C /* right_button_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_button_off@2x.png"; sourceTree = "<group>"; };
+		870B1C5616D99F3F0095955C /* right_button_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_button_on@2x.png"; sourceTree = "<group>"; };
+		870B1C5716D99F400095955C /* toggle_base_l@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_base_l@2x.png"; sourceTree = "<group>"; };
+		870B1C5816D99F400095955C /* toggle_base_r@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_base_r@2x.png"; sourceTree = "<group>"; };
+		870B1C5916D99F400095955C /* toggle_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_base.png; sourceTree = "<group>"; };
+		870B1C5A16D99F410095955C /* toggle_base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_base@2x.png"; sourceTree = "<group>"; };
+		870B1C5B16D99F410095955C /* toggle_button_l@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_button_l@2x.png"; sourceTree = "<group>"; };
+		870B1C5C16D99F420095955C /* toggle_button_r@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_button_r@2x.png"; sourceTree = "<group>"; };
+		870B1C5D16D99F420095955C /* toggle_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_button.png; sourceTree = "<group>"; };
+		870B1C5E16D99F430095955C /* toggle_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_button@2x.png"; sourceTree = "<group>"; };
 		8719BCFF16D4C91F00098642 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
 		8719BD0016D4C91F00098642 /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
 		8719BD0116D4C91F00098642 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
 		8719BD0216D4C91F00098642 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
-		875608C216C0B550009AD5D5 /* JTTableViewGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTableViewGestureRecognizer.h; sourceTree = "<group>"; };
-		875608C316C0B550009AD5D5 /* JTTableViewGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTableViewGestureRecognizer.m; sourceTree = "<group>"; };
-		875608C416C0B550009AD5D5 /* JTTransformableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTransformableTableViewCell.h; sourceTree = "<group>"; };
-		875608C516C0B550009AD5D5 /* JTTransformableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTransformableTableViewCell.m; sourceTree = "<group>"; };
-		875608C616C0B550009AD5D5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		875608C716C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JTGestureBasedTableViewHelper.h"; sourceTree = "<group>"; };
-		875608C816C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JTGestureBasedTableViewHelper.m"; sourceTree = "<group>"; };
+		8719BD0516D4CEB700098642 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8719BD0916D4CEEE00098642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8719BD0B16D4CEF300098642 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		875608CE16C0B6D2009AD5D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		875608D016C0B994009AD5D5 /* DZTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTimeCell.h; sourceTree = "<group>"; };
 		875608D116C0B994009AD5D5 /* DZTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTimeCell.m; sourceTree = "<group>"; };
@@ -251,10 +333,32 @@
 		878C98D716C931AD00E7B9F2 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		878C98D816C931AD00E7B9F2 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		878C98D916C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
-		87E855F316C23BCB0039E196 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
-		87E855F416C23BCB0039E196 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
 		87E855F716C23BEC0039E196 /* DZPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPieViewController.h; sourceTree = "<group>"; };
 		87E855F816C23BEC0039E196 /* DZPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPieViewController.m; sourceTree = "<group>"; };
+		87FAB7E916D774AC00169B68 /* TT-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TT-02.png"; sourceTree = "<group>"; };
+		87FAB7EB16D774B300169B68 /* TT-01-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TT-01-01.png"; sourceTree = "<group>"; };
+		87FAB82416D788BD00169B68 /* PrettyCustomViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyCustomViewTableViewCell.h; sourceTree = "<group>"; };
+		87FAB82516D788BD00169B68 /* PrettyCustomViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyCustomViewTableViewCell.m; sourceTree = "<group>"; };
+		87FAB82616D788BD00169B68 /* PrettyGridTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyGridTableViewCell.h; sourceTree = "<group>"; };
+		87FAB82716D788BD00169B68 /* PrettyGridTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyGridTableViewCell.m; sourceTree = "<group>"; };
+		87FAB82816D788BD00169B68 /* PrettySegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettySegmentedControlTableViewCell.h; sourceTree = "<group>"; };
+		87FAB82916D788BD00169B68 /* PrettySegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettySegmentedControlTableViewCell.m; sourceTree = "<group>"; };
+		87FAB82A16D788BD00169B68 /* PrettyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyTableViewCell.h; sourceTree = "<group>"; };
+		87FAB82B16D788BD00169B68 /* PrettyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyTableViewCell.m; sourceTree = "<group>"; };
+		87FAB82C16D788BD00169B68 /* PrettyDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyDrawing.h; sourceTree = "<group>"; };
+		87FAB82D16D788BD00169B68 /* PrettyDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyDrawing.m; sourceTree = "<group>"; };
+		87FAB82E16D788BD00169B68 /* PrettyKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyKit.h; sourceTree = "<group>"; };
+		87FAB82F16D788BD00169B68 /* PrettyNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyNavigationBar.h; sourceTree = "<group>"; };
+		87FAB83016D788BD00169B68 /* PrettyNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyNavigationBar.m; sourceTree = "<group>"; };
+		87FAB83116D788BD00169B68 /* PrettyShadowPlainTableview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyShadowPlainTableview.h; sourceTree = "<group>"; };
+		87FAB83216D788BD00169B68 /* PrettyShadowPlainTableview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyShadowPlainTableview.m; sourceTree = "<group>"; };
+		87FAB83316D788BD00169B68 /* PrettyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyTabBar.h; sourceTree = "<group>"; };
+		87FAB83416D788BD00169B68 /* PrettyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyTabBar.m; sourceTree = "<group>"; };
+		87FAB83516D788BD00169B68 /* PrettyToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrettyToolbar.h; sourceTree = "<group>"; };
+		87FAB83616D788BD00169B68 /* PrettyToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrettyToolbar.m; sourceTree = "<group>"; };
+		87FAB84116D7931F00169B68 /* TimeScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeScroller.h; sourceTree = "<group>"; };
+		87FAB84216D7932000169B68 /* TimeScroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeScroller.m; sourceTree = "<group>"; };
+		87FAB84616D7A86200169B68 /* TimeScroller.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TimeScroller.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,12 +366,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870B1BFF16D915480095955C /* libicucore.dylib in Frameworks */,
+				870B1BFD16D9150E0095955C /* SystemConfiguration.framework in Frameworks */,
+				870B1BFB16D914D80095955C /* MessageUI.framework in Frameworks */,
 				875608CF16C0B6D2009AD5D5 /* QuartzCore.framework in Frameworks */,
 				87076AF116BF760E0004EC84 /* UIKit.framework in Frameworks */,
 				87076AF316BF760E0004EC84 /* Foundation.framework in Frameworks */,
 				87076AF516BF760E0004EC84 /* CoreGraphics.framework in Frameworks */,
 				87076AF716BF760E0004EC84 /* CoreData.framework in Frameworks */,
 				878C98DA16C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a in Frameworks */,
+				870B1BF416D914050095955C /* AGCommon.framework in Frameworks */,
+				870B1BF616D914050095955C /* QQApi.framework in Frameworks */,
+				870B1BF716D914050095955C /* libWeChatSDK_armv7_armv7s.a in Frameworks */,
+				870B1BF916D914050095955C /* ShareSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +388,14 @@
 		87076AE116BF760E0004EC84 = {
 			isa = PBXGroup;
 			children = (
+				870B1C4916D99C260095955C /* Classes */,
+				870B1C0016D91C550095955C /* OpenGLES.framework */,
+				870B1BFE16D915460095955C /* libicucore.dylib */,
+				870B1BFC16D9150C0095955C /* SystemConfiguration.framework */,
+				870B1BFA16D914D70095955C /* MessageUI.framework */,
+				870B1BE916D914030095955C /* ShareSDK_v1.2.3 */,
+				87FAB7EB16D774B300169B68 /* TT-01-01.png */,
+				87FAB7E916D774AC00169B68 /* TT-02.png */,
 				878C988D16C931AD00E7B9F2 /* iOS */,
 				875608CE16C0B6D2009AD5D5 /* QuartzCore.framework */,
 				87076B1816BF79080004EC84 /* timeTrack.xcdatamodeld */,
@@ -310,30 +429,39 @@
 		87076AF816BF760E0004EC84 /* timeTrack */ = {
 			isa = PBXGroup;
 			children = (
+				870B1BC816D7C3E90095955C /* DAKeyboardControl */,
+				87FAB84616D7A86200169B68 /* TimeScroller.bundle */,
+				87FAB84116D7931F00169B68 /* TimeScroller.h */,
+				87FAB84216D7932000169B68 /* TimeScroller.m */,
+				87FAB82216D788BD00169B68 /* PrettyKit */,
 				8719BCFF16D4C91F00098642 /* PCLineChartView.h */,
 				8719BD0016D4C91F00098642 /* PCLineChartView.m */,
 				8719BD0116D4C91F00098642 /* PCPieChart.h */,
 				8719BD0216D4C91F00098642 /* PCPieChart.m */,
-				87E855F216C23BCB0039E196 /* PieChartView */,
 				875608F216C11C99009AD5D5 /* NSDATE */,
 				875608E016C100F8009AD5D5 /* JDFlipNumberView */,
-				875608C116C0B550009AD5D5 /* JTGestureBasedTableView */,
 				87076B2816BFE79B0004EC84 /* MagicalRecord */,
 				87076B0116BF760E0004EC84 /* DZAppDelegate.h */,
 				875608EC16C10126009AD5D5 /* DZTrackTimeViewController.h */,
 				875608ED16C10127009AD5D5 /* DZTrackTimeViewController.m */,
+				870B1BD116D84DE10095955C /* DZTimePickViewController.h */,
+				870B1BD216D84DE20095955C /* DZTimePickViewController.m */,
 				87076B0216BF760E0004EC84 /* DZAppDelegate.m */,
 				87076B9816C0AE6A0004EC84 /* DZShakeWindow.h */,
 				87076B9916C0AE6A0004EC84 /* DZShakeWindow.m */,
 				87076B8816C09EDF0004EC84 /* DZTimesViewController.h */,
 				87076B8916C09EDF0004EC84 /* DZTimesViewController.m */,
-				8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */,
 				87E855F716C23BEC0039E196 /* DZPieViewController.h */,
 				87E855F816C23BEC0039E196 /* DZPieViewController.m */,
+				8756090D16C13F19009AD5D5 /* DZTimeTrackManager.h */,
 				8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */,
 				875608D016C0B994009AD5D5 /* DZTimeCell.h */,
 				875608D116C0B994009AD5D5 /* DZTimeCell.m */,
+				870B1BD616D8B0ED0095955C /* DZGlobals.h */,
+				870B1BD716D8B0EE0095955C /* DZGlobals.m */,
 				87076AF916BF760E0004EC84 /* Supporting Files */,
+				870B1BC516D7B48A0095955C /* DZSettings.h */,
+				870B1BC616D7B48A0095955C /* DZSettings.m */,
 			);
 			path = timeTrack;
 			sourceTree = "<group>";
@@ -341,13 +469,28 @@
 		87076AF916BF760E0004EC84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				870B1C5316D99F3E0095955C /* left_button_off@2x.png */,
+				870B1C5416D99F3E0095955C /* left_button_on@2x.png */,
+				870B1C5516D99F3E0095955C /* right_button_off@2x.png */,
+				870B1C5616D99F3F0095955C /* right_button_on@2x.png */,
+				870B1C5716D99F400095955C /* toggle_base_l@2x.png */,
+				870B1C5816D99F400095955C /* toggle_base_r@2x.png */,
+				870B1C5916D99F400095955C /* toggle_base.png */,
+				870B1C5A16D99F410095955C /* toggle_base@2x.png */,
+				870B1C5B16D99F410095955C /* toggle_button_l@2x.png */,
+				870B1C5C16D99F420095955C /* toggle_button_r@2x.png */,
+				870B1C5D16D99F420095955C /* toggle_button.png */,
+				870B1C5E16D99F430095955C /* toggle_button@2x.png */,
 				87076AFA16BF760E0004EC84 /* timeTrack-Info.plist */,
+				870B1BDF16D8C2CA0095955C /* WhatIsLARK_DottedLine.png */,
+				870B1BE016D8C2CC0095955C /* WhatIsLARK_DottedLine@2x.png */,
 				87076AFB16BF760E0004EC84 /* InfoPlist.strings */,
 				87076AFE16BF760E0004EC84 /* main.m */,
 				87076B0016BF760E0004EC84 /* timeTrack-Prefix.pch */,
 				87076B0416BF760E0004EC84 /* Default.png */,
 				87076B0616BF760E0004EC84 /* Default@2x.png */,
 				87076B0816BF760E0004EC84 /* Default-568h@2x.png */,
+				8719BD0A16D4CEEE00098642 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -453,18 +596,50 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		875608C116C0B550009AD5D5 /* JTGestureBasedTableView */ = {
+		870B1BC816D7C3E90095955C /* DAKeyboardControl */ = {
 			isa = PBXGroup;
 			children = (
-				875608C216C0B550009AD5D5 /* JTTableViewGestureRecognizer.h */,
-				875608C316C0B550009AD5D5 /* JTTableViewGestureRecognizer.m */,
-				875608C416C0B550009AD5D5 /* JTTransformableTableViewCell.h */,
-				875608C516C0B550009AD5D5 /* JTTransformableTableViewCell.m */,
-				875608C616C0B550009AD5D5 /* LICENSE */,
-				875608C716C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.h */,
-				875608C816C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.m */,
+				870B1BC916D7C3E90095955C /* DAKeyboardControl.h */,
+				870B1BCA16D7C3E90095955C /* DAKeyboardControl.m */,
 			);
-			path = JTGestureBasedTableView;
+			path = DAKeyboardControl;
+			sourceTree = "<group>";
+		};
+		870B1BE916D914030095955C /* ShareSDK_v1.2.3 */ = {
+			isa = PBXGroup;
+			children = (
+				870B1BEA16D914040095955C /* AGCommon.framework */,
+				870B1BEB16D914040095955C /* ShareSDKLocalizable.strings */,
+				870B1BED16D914040095955C /* QQApi.framework */,
+				870B1BEE16D914040095955C /* SDKExport */,
+				870B1BF216D914050095955C /* ShareSDK.bundle */,
+				870B1BF316D914050095955C /* ShareSDK.framework */,
+			);
+			path = ShareSDK_v1.2.3;
+			sourceTree = "<group>";
+		};
+		870B1BEE16D914040095955C /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				870B1BEF16D914040095955C /* libWeChatSDK_armv7_armv7s.a */,
+				870B1BF016D914040095955C /* WXApi.h */,
+				870B1BF116D914040095955C /* WXApiObject.h */,
+			);
+			path = SDKExport;
+			sourceTree = "<group>";
+		};
+		870B1C4916D99C260095955C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				870B1C4A16D99C2C0095955C /* ToggleBase.h */,
+				870B1C4B16D99C2C0095955C /* ToggleBase.m */,
+				870B1C4C16D99C2C0095955C /* ToggleButton.h */,
+				870B1C4D16D99C2C0095955C /* ToggleButton.m */,
+				870B1C4E16D99C2C0095955C /* ToggleView.h */,
+				870B1C4F16D99C2C0095955C /* ToggleView.m */,
+			);
+			name = Classes;
+			path = ToggleView/ToggleView/ToggleView/Classes;
 			sourceTree = "<group>";
 		};
 		875608E016C100F8009AD5D5 /* JDFlipNumberView */ = {
@@ -584,13 +759,42 @@
 			path = CorePlotHeaders;
 			sourceTree = "<group>";
 		};
-		87E855F216C23BCB0039E196 /* PieChartView */ = {
+		87FAB82216D788BD00169B68 /* PrettyKit */ = {
 			isa = PBXGroup;
 			children = (
-				87E855F316C23BCB0039E196 /* PieChartView.h */,
-				87E855F416C23BCB0039E196 /* PieChartView.m */,
+				87FAB82316D788BD00169B68 /* Cells */,
+				87FAB82C16D788BD00169B68 /* PrettyDrawing.h */,
+				87FAB82D16D788BD00169B68 /* PrettyDrawing.m */,
+				87FAB82E16D788BD00169B68 /* PrettyKit.h */,
+				87FAB82F16D788BD00169B68 /* PrettyNavigationBar.h */,
+				87FAB83016D788BD00169B68 /* PrettyNavigationBar.m */,
+				87FAB83116D788BD00169B68 /* PrettyShadowPlainTableview.h */,
+				87FAB83216D788BD00169B68 /* PrettyShadowPlainTableview.m */,
+				87FAB83316D788BD00169B68 /* PrettyTabBar.h */,
+				87FAB83416D788BD00169B68 /* PrettyTabBar.m */,
+				87FAB83516D788BD00169B68 /* PrettyToolbar.h */,
+				87FAB83616D788BD00169B68 /* PrettyToolbar.m */,
 			);
-			path = PieChartView;
+			path = PrettyKit;
+			sourceTree = "<group>";
+		};
+		87FAB82316D788BD00169B68 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				870B1BDC16D8B7030095955C /* DZTimeTableviewCell.h */,
+				870B1BE316D8C4790095955C /* HistoryCellBackground.png */,
+				870B1BE416D8C4790095955C /* HistoryCellBackground@2x.png */,
+				870B1BDD16D8B7030095955C /* DZTimeTableviewCell.m */,
+				87FAB82416D788BD00169B68 /* PrettyCustomViewTableViewCell.h */,
+				87FAB82516D788BD00169B68 /* PrettyCustomViewTableViewCell.m */,
+				87FAB82616D788BD00169B68 /* PrettyGridTableViewCell.h */,
+				87FAB82716D788BD00169B68 /* PrettyGridTableViewCell.m */,
+				87FAB82816D788BD00169B68 /* PrettySegmentedControlTableViewCell.h */,
+				87FAB82916D788BD00169B68 /* PrettySegmentedControlTableViewCell.m */,
+				87FAB82A16D788BD00169B68 /* PrettyTableViewCell.h */,
+				87FAB82B16D788BD00169B68 /* PrettyTableViewCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,6 +833,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 87076AE116BF760E0004EC84;
 			productRefGroup = 87076AED16BF760E0004EC84 /* Products */;
@@ -649,8 +854,29 @@
 				87076B0516BF760E0004EC84 /* Default.png in Resources */,
 				87076B0716BF760E0004EC84 /* Default@2x.png in Resources */,
 				87076B0916BF760E0004EC84 /* Default-568h@2x.png in Resources */,
-				875608CB16C0B550009AD5D5 /* LICENSE in Resources */,
 				875608E916C100F8009AD5D5 /* JDFlipNumberView.bundle in Resources */,
+				8719BD0816D4CEEE00098642 /* Localizable.strings in Resources */,
+				87FAB7EA16D774AC00169B68 /* TT-02.png in Resources */,
+				87FAB7EC16D774B300169B68 /* TT-01-01.png in Resources */,
+				87FAB84716D7A86300169B68 /* TimeScroller.bundle in Resources */,
+				870B1BE116D8C2CE0095955C /* WhatIsLARK_DottedLine.png in Resources */,
+				870B1BE216D8C2CE0095955C /* WhatIsLARK_DottedLine@2x.png in Resources */,
+				870B1BE516D8C47A0095955C /* HistoryCellBackground.png in Resources */,
+				870B1BE616D8C47A0095955C /* HistoryCellBackground@2x.png in Resources */,
+				870B1BF516D914050095955C /* ShareSDKLocalizable.strings in Resources */,
+				870B1BF816D914050095955C /* ShareSDK.bundle in Resources */,
+				870B1C5F16D99F430095955C /* left_button_off@2x.png in Resources */,
+				870B1C6016D99F430095955C /* left_button_on@2x.png in Resources */,
+				870B1C6116D99F430095955C /* right_button_off@2x.png in Resources */,
+				870B1C6216D99F430095955C /* right_button_on@2x.png in Resources */,
+				870B1C6316D99F430095955C /* toggle_base_l@2x.png in Resources */,
+				870B1C6416D99F430095955C /* toggle_base_r@2x.png in Resources */,
+				870B1C6516D99F430095955C /* toggle_base.png in Resources */,
+				870B1C6616D99F430095955C /* toggle_base@2x.png in Resources */,
+				870B1C6716D99F430095955C /* toggle_button_l@2x.png in Resources */,
+				870B1C6816D99F430095955C /* toggle_button_r@2x.png in Resources */,
+				870B1C6916D99F430095955C /* toggle_button.png in Resources */,
+				870B1C6A16D99F430095955C /* toggle_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +887,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870B1BDE16D8B7720095955C /* DZTimeTableviewCell.m in Sources */,
+				87FAB84316D7A68200169B68 /* TimeScroller.m in Sources */,
 				87076AFF16BF760E0004EC84 /* main.m in Sources */,
 				87076B0316BF760E0004EC84 /* DZAppDelegate.m in Sources */,
 				87076B1A16BF79080004EC84 /* timeTrack.xcdatamodeld in Sources */,
@@ -693,9 +921,6 @@
 				87076B7D16BFE79B0004EC84 /* MagicalRecord.m in Sources */,
 				87076B8A16C09EE00004EC84 /* DZTimesViewController.m in Sources */,
 				87076B9A16C0AE6B0004EC84 /* DZShakeWindow.m in Sources */,
-				875608C916C0B550009AD5D5 /* JTTableViewGestureRecognizer.m in Sources */,
-				875608CA16C0B550009AD5D5 /* JTTransformableTableViewCell.m in Sources */,
-				875608CC16C0B550009AD5D5 /* UIColor+JTGestureBasedTableViewHelper.m in Sources */,
 				875608D216C0B995009AD5D5 /* DZTimeCell.m in Sources */,
 				875608E816C100F8009AD5D5 /* JDDateCountdownFlipView.m in Sources */,
 				875608EA16C100F8009AD5D5 /* JDFlipNumberView.m in Sources */,
@@ -705,10 +930,25 @@
 				875608F716C11C99009AD5D5 /* NSDate-Utilities.m in Sources */,
 				875608F816C11C99009AD5D5 /* TimeFormatters.m in Sources */,
 				8756090F16C13F1C009AD5D5 /* DZTimeTrackManager.m in Sources */,
-				87E855F516C23BCB0039E196 /* PieChartView.m in Sources */,
 				87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */,
 				8719BD0316D4C91F00098642 /* PCLineChartView.m in Sources */,
 				8719BD0416D4C91F00098642 /* PCPieChart.m in Sources */,
+				87FAB83716D788BD00169B68 /* PrettyCustomViewTableViewCell.m in Sources */,
+				87FAB83816D788BD00169B68 /* PrettyGridTableViewCell.m in Sources */,
+				87FAB83916D788BD00169B68 /* PrettySegmentedControlTableViewCell.m in Sources */,
+				87FAB83A16D788BD00169B68 /* PrettyTableViewCell.m in Sources */,
+				87FAB83B16D788BD00169B68 /* PrettyDrawing.m in Sources */,
+				87FAB83C16D788BD00169B68 /* PrettyNavigationBar.m in Sources */,
+				87FAB83D16D788BD00169B68 /* PrettyShadowPlainTableview.m in Sources */,
+				87FAB83E16D788BD00169B68 /* PrettyTabBar.m in Sources */,
+				87FAB83F16D788BD00169B68 /* PrettyToolbar.m in Sources */,
+				870B1BC716D7B48A0095955C /* DZSettings.m in Sources */,
+				870B1BCB16D7C3E90095955C /* DAKeyboardControl.m in Sources */,
+				870B1BD316D84DE20095955C /* DZTimePickViewController.m in Sources */,
+				870B1BD816D8B0EF0095955C /* DZGlobals.m in Sources */,
+				870B1C5016D99C2C0095955C /* ToggleBase.m in Sources */,
+				870B1C5116D99C2C0095955C /* ToggleButton.m in Sources */,
+				870B1C5216D99C2C0095955C /* ToggleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,8 +959,26 @@
 			isa = PBXVariantGroup;
 			children = (
 				87076AFC16BF760E0004EC84 /* en */,
+				8719BD0516D4CEB700098642 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		870B1BEB16D914040095955C /* ShareSDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				870B1BEC16D914040095955C /* en */,
+			);
+			name = ShareSDKLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		8719BD0A16D4CEEE00098642 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8719BD0916D4CEEE00098642 /* en */,
+				8719BD0B16D4CEF300098642 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -748,7 +1006,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -769,7 +1027,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -779,6 +1037,12 @@
 		87076B1016BF760E0004EC84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ShareSDK_v1.2.3\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "timeTrack/timeTrack-Prefix.pch";
 				INFOPLIST_FILE = "timeTrack/timeTrack-Info.plist";
@@ -786,8 +1050,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
+					"\"$(SRCROOT)/ShareSDK_v1.2.3/SDKExport\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -795,6 +1062,12 @@
 		87076B1116BF760E0004EC84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ShareSDK_v1.2.3\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "timeTrack/timeTrack-Prefix.pch";
 				INFOPLIST_FILE = "timeTrack/timeTrack-Info.plist";
@@ -802,8 +1075,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
+					"\"$(SRCROOT)/ShareSDK_v1.2.3/SDKExport\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

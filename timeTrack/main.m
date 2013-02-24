@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <ShareSDK/ShareConfig.h>
 #import "DZAppDelegate.h"
 
 int main(int argc, char *argv[])

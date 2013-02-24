@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  timeTrack
+
+  Created by dzpqzb on 13-2-20.
+  Copyright (c) 2013年 dzpqzb.com. All rights reserved.
+*/
+"Sleep"="睡大觉zzzzZZ";
+"Eat"="吃饭";
+"Work"="工作中，干活啊";
+"On the way"="在路上，坐公交，倒地铁";
+"Twitter"="看微博";
+"Fackbook"="上人人";
+"Analyze"="分析";
+
+"Begin Date"="开始时间";
+"End Date"="结束时间";
+"Add a new type"="添加新的时间种类";
+"Set date"="设定时间";
+"Begin"="开始";
+"Spend"="花费";
+"End"="结束";

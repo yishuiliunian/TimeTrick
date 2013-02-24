@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TimeScroller.h"
 @interface DZTimesViewController : UITableViewController
 
 @end

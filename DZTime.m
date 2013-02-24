@@ -25,7 +25,7 @@ NSString* const DZTimeSectionInditify = @"sectionInditify";
 - (NSString*) sectionInditify
 {
     NSDate* dateBegin = self.dateBegain;
-    return [NSString stringWithFormat:@"%d-%d-%d",[dateBegin year],[dateBegin month], [ dateBegin day]];
+    return [[NSString stringWithFormat:@"%d-%d-%d",[dateBegin year],[dateBegin month], [ dateBegin day]] lowercaseString];
 }
 
 @end

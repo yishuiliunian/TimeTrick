@@ -12,6 +12,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import "PrettyKit.h"
     #import "CoreData+MagicalRecord.h"
     #import "DZTime.h"
+    #import "DZGlobals.h"
 #endif

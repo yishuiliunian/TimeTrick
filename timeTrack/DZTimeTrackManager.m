@@ -8,38 +8,68 @@
 
 #import "DZTimeTrackManager.h"
 
+static NSString* const DZTimeMangerBeginDate = @"DZTimeMangerBeginDate";
+static NSString* const DZTimeMangerEndDate = @"DZTimeMangerEndDate";
+static NSString* const DZTimeMangerPaused = @"DZTimeMangerPaused";
 @implementation DZTimeTrackManager
-@synthesize beginDate=_beginDate;
-@synthesize endDate=_endDate;
-
 - (void) startTimeTrack
 {
-    if (![DZTimeTrackManager isLastTrackFinished]) {
-        _beginDate = [DZTimeTrackManager lastTrackBeginDate];
+    if ([DZTimeTrackManager isLastTrackFinished]) {
+        [self setBeginDate:[NSDate date]];
     }
-    else
-    {
-        _beginDate = [NSDate date];
-    }
-    [[NSUserDefaults standardUserDefaults] setObject:_beginDate forKey:@"beginDate"];
+}
+
+- (void) setBeginDate:(NSDate *)beginDate_
+{
+    [[NSUserDefaults standardUserDefaults] setObject:beginDate_ forKey:DZTimeMangerBeginDate];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+- (void) setEndDate:(NSDate *)endDate_
+{
+    [[NSUserDefaults standardUserDefaults] setObject:endDate_  forKey:DZTimeMangerEndDate];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (NSDate*) endDate
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DZTimeMangerEndDate];
+}
+//- (void) pasueTimeTrack
+//{
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:DZTimeMangerPaused];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//}
+//
+//- (void) resumeTimeTrack
+//{
+//    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:DZTimeMangerPaused];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//}
+//
+//- (BOOL) isPasued
+//{
+//    return [[NSUserDefaults standardUserDefaults] boolForKey:DZTimeMangerPaused];
+//}
 - (void) stopTimeTrack
 {
-    _endDate = [NSDate date];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"beginDate"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:DZTimeMangerBeginDate];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:DZTimeMangerEndDate];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSDate*) beginDate
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DZTimeMangerBeginDate];
 }
 
 + (BOOL) isLastTrackFinished
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"] == nil;
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DZTimeMangerBeginDate] == nil;
 }
 
 + (NSDate*) lastTrackBeginDate
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"beginDate"];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DZTimeMangerBeginDate];
 }
 
 @end
