@@ -103,6 +103,9 @@
 		875608F816C11C99009AD5D5 /* TimeFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 875608F616C11C99009AD5D5 /* TimeFormatters.m */; };
 		8756090F16C13F1C009AD5D5 /* DZTimeTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756090E16C13F1A009AD5D5 /* DZTimeTrackManager.m */; };
 		878C98DA16C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C98D916C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a */; };
+		87BA890D16DAFB8C00BC646F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF016BF760E0004EC84 /* UIKit.framework */; };
+		87BA890E16DAFB8C00BC646F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF216BF760E0004EC84 /* Foundation.framework */; };
+		87BA890F16DAFB8C00BC646F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF416BF760E0004EC84 /* CoreGraphics.framework */; };
 		87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F816C23BEC0039E196 /* DZPieViewController.m */; };
 		87FAB7EA16D774AC00169B68 /* TT-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7E916D774AC00169B68 /* TT-02.png */; };
 		87FAB7EC16D774B300169B68 /* TT-01-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7EB16D774B300169B68 /* TT-01-01.png */; };
@@ -352,6 +355,7 @@
 		878C98D716C931AD00E7B9F2 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		878C98D816C931AD00E7B9F2 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		878C98D916C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		87BA890C16DAFB8C00BC646F /* WizSpilitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizSpilitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E855F716C23BEC0039E196 /* DZPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPieViewController.h; sourceTree = "<group>"; };
 		87E855F816C23BEC0039E196 /* DZPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPieViewController.m; sourceTree = "<group>"; };
 		87FAB7E916D774AC00169B68 /* TT-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TT-02.png"; sourceTree = "<group>"; };
@@ -401,6 +405,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87BA890916DAFB8C00BC646F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BA890D16DAFB8C00BC646F /* UIKit.framework in Frameworks */,
+				87BA890E16DAFB8C00BC646F /* Foundation.framework in Frameworks */,
+				87BA890F16DAFB8C00BC646F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -430,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				87076AEC16BF760E0004EC84 /* timeTrack.app */,
+				87BA890C16DAFB8C00BC646F /* WizSpilitTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -847,6 +862,23 @@
 			productReference = 87076AEC16BF760E0004EC84 /* timeTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		87BA890B16DAFB8C00BC646F /* WizSpilitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87BA892E16DAFB8C00BC646F /* Build configuration list for PBXNativeTarget "WizSpilitTest" */;
+			buildPhases = (
+				87BA890816DAFB8C00BC646F /* Sources */,
+				87BA890916DAFB8C00BC646F /* Frameworks */,
+				87BA890A16DAFB8C00BC646F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WizSpilitTest;
+			productName = WizSpilitTest;
+			productReference = 87BA890C16DAFB8C00BC646F /* WizSpilitTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -871,6 +903,7 @@
 			projectRoot = "";
 			targets = (
 				87076AEB16BF760E0004EC84 /* timeTrack */,
+				87BA890B16DAFB8C00BC646F /* WizSpilitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -912,6 +945,13 @@
 				870B1C7016D9BF1A0095955C /* icon_share@2x.png in Resources */,
 				870B1C8116DA114D0095955C /* guide_1.jpg in Resources */,
 				870B1C8216DA114D0095955C /* guide_2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87BA890A16DAFB8C00BC646F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +1027,13 @@
 				870B1C5216D99C2C0095955C /* ToggleView.m in Sources */,
 				870B1C7816D9F83B0095955C /* DZGuidViewController.m in Sources */,
 				870B1C7B16DA07600095955C /* DZSettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87BA890816DAFB8C00BC646F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,8 +1122,8 @@
 		87076B1016BF760E0004EC84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ShareSDK_v1.2.3\"",
@@ -1091,8 +1138,8 @@
 					"\"$(SRCROOT)/ShareSDK_v1.2.3/SDKExport\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8269541-45C7-4882-A6D6-3FFF943C3852";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1100,8 +1147,8 @@
 		87076B1116BF760E0004EC84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ShareSDK_v1.2.3\"",
@@ -1116,8 +1163,48 @@
 					"\"$(SRCROOT)/ShareSDK_v1.2.3/SDKExport\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		87BA892F16DAFB8C00BC646F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WizSpilitTest/WizSpilitTest-Prefix.pch";
+				INFOPLIST_FILE = "WizSpilitTest/WizSpilitTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		87BA893016DAFB8C00BC646F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhao Dong (FM9P6LZ2YK)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WizSpilitTest/WizSpilitTest-Prefix.pch";
+				INFOPLIST_FILE = "WizSpilitTest/WizSpilitTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8269541-45C7-4882-A6D6-3FFF943C3852";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1139,6 +1226,15 @@
 			buildConfigurations = (
 				87076B1016BF760E0004EC84 /* Debug */,
 				87076B1116BF760E0004EC84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87BA892E16DAFB8C00BC646F /* Build configuration list for PBXNativeTarget "WizSpilitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87BA892F16DAFB8C00BC646F /* Debug */,
+				87BA893016DAFB8C00BC646F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

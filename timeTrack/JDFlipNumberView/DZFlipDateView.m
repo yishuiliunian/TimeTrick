@@ -19,13 +19,15 @@ typedef enum {
 @interface DZFlipDateView () <JDGroupedFlipNumberViewDelegate>
 {
     NSArray* flipDataViewArray;
+    float timeDuration;
 }
-
+@property (nonatomic, strong) NSDate* trackBeginTime;
 @end
 @implementation DZFlipDateView
 @synthesize beginDate;
 @synthesize endDate;
 @synthesize timeTrackManager = _timeTrackManager;
+@synthesize trackBeginTime = _trackBeginTime;
 - (void) setZDistance:(NSUInteger)zDistance
 {
     for (UIView* each in [self subviews]) {
@@ -91,6 +93,8 @@ typedef enum {
     NSDate* timerTrackBD = [_timeTrackManager beginDate];
     NSDate* timerTrackED = [_timeTrackManager endDate];
     beginDate = timerTrackBD?timerTrackBD:[NSDate date];
+    self.trackBeginTime = beginDate;
+    timeDuration = 0;
     endDate = timerTrackED?timerTrackED:[NSDate date];
    [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] animateUpWithTimeInterval:1];
     [_timeTrackManager startTimeTrack];
@@ -146,6 +150,8 @@ NSUInteger (^flipCurrentNumber)(NSArray*,DZFlipDateViewTag) = ^(NSArray* array, 
 {
     beginDate = beginDate_;
     endDate = endDate_;
+     _trackBeginTime = [NSDate date];
+    timeDuration = 0;
     NSUInteger flags = NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSDateComponents* dateComponents = [[NSCalendar currentCalendar] components: flags fromDate:beginDate toDate:endDate  options: 0];
     [self jdGroupFlipViewByTag:DZFlipDateViewDay].intValue  = [dateComponents day];
@@ -155,16 +161,26 @@ NSUInteger (^flipCurrentNumber)(NSArray*,DZFlipDateViewTag) = ^(NSArray* array, 
 }
 - (void) pasueTrack
 {
-    [self resetFlipViewDate:beginDate toEnd:endDate];
-   [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] stopAnimation]; 
+    [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] stopAnimation];
 }
 - (void) resumeTrack
 {
-    [self resetFlipViewDate:beginDate toEnd:endDate];
+    [self resetFlipViewDate:self.beginDate toEnd:self.endDate];
    [[flipDataViewArray objectAtIndex:DZFlipDateViewSecond%1000] animateUpWithTimeInterval:1];
 }
 - (void) groupedFlipNumberView:(JDGroupedFlipNumberView *)groupedFlipNumberView willChangeToValue:(NSUInteger)newValue
 {
+    timeDuration += 1;
+    NSLog(@"interval %f",fabs(fabs([_trackBeginTime timeIntervalSinceNow]) - timeDuration));
+    if (fabs(fabs([_trackBeginTime timeIntervalSinceNow]) - timeDuration) > 1) {
+        if (!self.endDate) {
+            [self resetFlipViewDate:beginDate toEnd:[NSDate date]];
+        }
+        else
+        {
+            [self resetFlipViewDate:beginDate toEnd:[NSDate dateWithTimeInterval:fabs([_trackBeginTime timeIntervalSinceNow]) sinceDate:self.endDate]];
+        }
+    }
     endDate = [NSDate dateWithTimeInterval:1 sinceDate:endDate];
     JDGroupedFlipNumberView* animateView = nil;
     if (groupedFlipNumberView.tag == DZFlipDateViewSecond) {
@@ -185,13 +201,9 @@ NSUInteger (^flipCurrentNumber)(NSArray*,DZFlipDateViewTag) = ^(NSArray* array, 
     }
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
 }
-*/
 
 @end

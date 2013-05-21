@@ -15,4 +15,5 @@
 - (void) stopTimeTrack;
 + (BOOL) isLastTrackFinished;
 + (NSDate*) lastTrackBeginDate;
+
 @end

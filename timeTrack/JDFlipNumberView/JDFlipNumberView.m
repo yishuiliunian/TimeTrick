@@ -331,6 +331,7 @@ static NSString* kFlipAnimationKey = @"kFlipAnimationKey";
 	 
 	// show animated view
 	mImageViewFlip.hidden = NO;
+    [self setIntValue:self.intValue];
 }
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
@@ -417,7 +418,8 @@ static NSString* kFlipAnimationKey = @"kFlipAnimationKey";
 {
 	[mImageViewFlip.layer removeAllAnimations];
 	mImageViewFlip.hidden = YES;
-	
+    [self setIntValue:self.intValue];
+    
 	if (mTimer)
 	{
 		[mTimer invalidate];

@@ -40,6 +40,7 @@
 {
     dateFlipView.beginDate= beginDate;
     dateFlipView.endDate = endDate;
+    [dateFlipView resetFlipViewDate:beginDate toEnd:endDate];
     [toggleSwitchView setSelectedButton:ToggleButtonSelectedLeft];
 }
 
@@ -222,10 +223,12 @@
 - (void) selectLeftButton
 {
     [dateFlipView pasueTrack];
+    self.title = NSLocalizedString(@"Paused...", nil);
 }
 - (void) selectRightButton
 {
     [dateFlipView resumeTrack];
+    self.title = NSLocalizedString(@"Tracking...", nil);
 }
 
 @end

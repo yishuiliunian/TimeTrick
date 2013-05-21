@@ -90,5 +90,6 @@ typedef enum {
  
  @return A new autoreleased UIColor instance. */
 + (UIColor *) colorWithHex:(int)hex;
++ (UIColor*) colorWithR:(float)r g:(float)g b:(float)b;
 
 @end
