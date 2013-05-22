@@ -12,8 +12,7 @@
 
 - (void) setMoodBackgroud
 {
-    
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]];
+    self.backgroundColor = [UIColor themeBackgroupColor];
 }
 
 @end

@@ -16,6 +16,7 @@
 #import "DZTimePickViewController.h"
 #import "ToggleView.h"
 #import "NSDate-Utilities.h"
+#import "UIColor+DZColor.h"
 @interface DZTrackTimeViewController () <UIPickerViewDataSource, UIPickerViewDelegate, DZTimePickViewDelegate,ToggleViewDelegate>
 {
     DZFlipDateView* dateFlipView;
@@ -99,10 +100,12 @@
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
 }
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 - (void) viewDidDisappear:(BOOL)animated
 {
@@ -171,12 +174,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     //
+    [self.navigationController setNavigationBarHidden:NO];
     self.title = NSLocalizedString(@"Tracking...", nil);
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]];
+    self.view.backgroundColor = [UIColor themeBackgroupColor];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveTime)];
     //
     [self reloadAllTypes];

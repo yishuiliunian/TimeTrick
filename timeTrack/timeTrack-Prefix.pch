@@ -16,4 +16,5 @@
     #import "CoreData+MagicalRecord.h"
     #import "DZTime.h"
     #import "DZGlobals.h"
+#import "UIColor+DZColor.h"
 #endif

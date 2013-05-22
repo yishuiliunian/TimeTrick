@@ -55,7 +55,7 @@ static float const DZPickerCellHeight = 160;
         label.textAlignment = UITextAlignmentCenter;
     };
     //
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]]; 
+    self.view.backgroundColor = [UIColor themeBackgroupColor];
     float pickerCellHeight = CGRectGetHeight(self.view.frame)/2 - 44;
     UILabel* beginLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 44)];
     beginLabel.text = NSLocalizedString(@"Begin Date", nil);

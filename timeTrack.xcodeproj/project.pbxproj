@@ -106,6 +106,12 @@
 		87BA890D16DAFB8C00BC646F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF016BF760E0004EC84 /* UIKit.framework */; };
 		87BA890E16DAFB8C00BC646F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF216BF760E0004EC84 /* Foundation.framework */; };
 		87BA890F16DAFB8C00BC646F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87076AF416BF760E0004EC84 /* CoreGraphics.framework */; };
+		87D340FD174B5E6800C99199 /* DZIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D340FC174B5E6700C99199 /* DZIndexViewController.m */; };
+		87D340FF174B62E700C99199 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D340FE174B62E700C99199 /* View.xib */; };
+		87D34102174B640E00C99199 /* DZTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D34101174B640C00C99199 /* DZTitleView.m */; };
+		87D34105174B7CB800C99199 /* DZTriangleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D34104174B7CB600C99199 /* DZTriangleButton.m */; };
+		87D34108174B803A00C99199 /* UIColor+DZColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D34107174B803800C99199 /* UIColor+DZColor.m */; };
+		87D3410B174BCA5D00C99199 /* DZNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D3410A174BCA5A00C99199 /* DZNumberView.m */; };
 		87E855F916C23BEC0039E196 /* DZPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E855F816C23BEC0039E196 /* DZPieViewController.m */; };
 		87FAB7EA16D774AC00169B68 /* TT-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7E916D774AC00169B68 /* TT-02.png */; };
 		87FAB7EC16D774B300169B68 /* TT-01-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAB7EB16D774B300169B68 /* TT-01-01.png */; };
@@ -356,6 +362,17 @@
 		878C98D816C931AD00E7B9F2 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		878C98D916C931AD00E7B9F2 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		87BA890C16DAFB8C00BC646F /* WizSpilitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizSpilitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87D340FB174B5E6600C99199 /* DZIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DZIndexViewController.h; path = Class/UI/DZIndexViewController.h; sourceTree = "<group>"; };
+		87D340FC174B5E6700C99199 /* DZIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DZIndexViewController.m; path = Class/UI/DZIndexViewController.m; sourceTree = "<group>"; };
+		87D340FE174B62E700C99199 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = timeTrack/Class/UI/View.xib; sourceTree = "<group>"; };
+		87D34100174B640C00C99199 /* DZTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTitleView.h; sourceTree = "<group>"; };
+		87D34101174B640C00C99199 /* DZTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTitleView.m; sourceTree = "<group>"; };
+		87D34103174B7CB500C99199 /* DZTriangleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTriangleButton.h; sourceTree = "<group>"; };
+		87D34104174B7CB600C99199 /* DZTriangleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTriangleButton.m; sourceTree = "<group>"; };
+		87D34106174B803700C99199 /* UIColor+DZColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DZColor.h"; sourceTree = "<group>"; };
+		87D34107174B803800C99199 /* UIColor+DZColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DZColor.m"; sourceTree = "<group>"; };
+		87D34109174BCA5700C99199 /* DZNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNumberView.h; sourceTree = "<group>"; };
+		87D3410A174BCA5A00C99199 /* DZNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNumberView.m; sourceTree = "<group>"; };
 		87E855F716C23BEC0039E196 /* DZPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPieViewController.h; sourceTree = "<group>"; };
 		87E855F816C23BEC0039E196 /* DZPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPieViewController.m; sourceTree = "<group>"; };
 		87FAB7E916D774AC00169B68 /* TT-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TT-02.png"; sourceTree = "<group>"; };
@@ -421,6 +438,7 @@
 		87076AE116BF760E0004EC84 = {
 			isa = PBXGroup;
 			children = (
+				87D340FE174B62E700C99199 /* View.xib */,
 				870B1C4916D99C260095955C /* Classes */,
 				870B1C0016D91C550095955C /* OpenGLES.framework */,
 				870B1BFE16D915460095955C /* libicucore.dylib */,
@@ -476,11 +494,21 @@
 				875608E016C100F8009AD5D5 /* JDFlipNumberView */,
 				87076B2816BFE79B0004EC84 /* MagicalRecord */,
 				875608EC16C10126009AD5D5 /* DZTrackTimeViewController.h */,
+				87D34109174BCA5700C99199 /* DZNumberView.h */,
+				87D3410A174BCA5A00C99199 /* DZNumberView.m */,
 				875608ED16C10127009AD5D5 /* DZTrackTimeViewController.m */,
+				87D34103174B7CB500C99199 /* DZTriangleButton.h */,
+				87D34104174B7CB600C99199 /* DZTriangleButton.m */,
 				870B1BD116D84DE10095955C /* DZTimePickViewController.h */,
 				870B1BD216D84DE20095955C /* DZTimePickViewController.m */,
 				87076B0116BF760E0004EC84 /* DZAppDelegate.h */,
 				87076B0216BF760E0004EC84 /* DZAppDelegate.m */,
+				87D340FB174B5E6600C99199 /* DZIndexViewController.h */,
+				87D34100174B640C00C99199 /* DZTitleView.h */,
+				87D34101174B640C00C99199 /* DZTitleView.m */,
+				87D340FC174B5E6700C99199 /* DZIndexViewController.m */,
+				87D34106174B803700C99199 /* UIColor+DZColor.h */,
+				87D34107174B803800C99199 /* UIColor+DZColor.m */,
 				870B1C7916DA07530095955C /* DZSettingsViewController.h */,
 				870B1C7A16DA07590095955C /* DZSettingsViewController.m */,
 				87076B9816C0AE6A0004EC84 /* DZShakeWindow.h */,
@@ -945,6 +973,7 @@
 				870B1C7016D9BF1A0095955C /* icon_share@2x.png in Resources */,
 				870B1C8116DA114D0095955C /* guide_1.jpg in Resources */,
 				870B1C8216DA114D0095955C /* guide_2.jpg in Resources */,
+				87D340FF174B62E700C99199 /* View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1056,11 @@
 				870B1C5216D99C2C0095955C /* ToggleView.m in Sources */,
 				870B1C7816D9F83B0095955C /* DZGuidViewController.m in Sources */,
 				870B1C7B16DA07600095955C /* DZSettingsViewController.m in Sources */,
+				87D340FD174B5E6800C99199 /* DZIndexViewController.m in Sources */,
+				87D34102174B640E00C99199 /* DZTitleView.m in Sources */,
+				87D34105174B7CB800C99199 /* DZTriangleButton.m in Sources */,
+				87D34108174B803A00C99199 /* UIColor+DZColor.m in Sources */,
+				87D3410B174BCA5D00C99199 /* DZNumberView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

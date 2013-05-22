@@ -14,6 +14,9 @@
 #import "WXApi.h"
 #import "CloudReview.h"
 #import "DZGuidViewController.h"
+
+#import "DZIndexViewController.h"
+
 static NSString* const ShareSDKKey = @"a670cbbfa8";
 @implementation DZAppDelegate
 
@@ -29,8 +32,10 @@ static NSString* const ShareSDKKey = @"a670cbbfa8";
     DZTimesViewController* viewController = [[DZTimesViewController alloc]init];
     UINavigationController* controller = [[UINavigationController alloc] initWithRootViewController:viewController];
     PrettyNavigationBar* prettyNav = [[PrettyNavigationBar alloc] init];
+    
     [controller setValue:prettyNav forKey:@"navigationBar"];
-    self.window.rootViewController = controller;
+//    self.window.rootViewController = controller;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[DZIndexViewController alloc] init]];
     [self.window makeKeyAndVisible];
    //
     BOOL first = [[NSUserDefaults standardUserDefaults] boolForKey:@"notShowAgain"];

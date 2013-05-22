@@ -102,6 +102,7 @@ static CGFloat DZtimeTableViewCellHeight = 70;
 {
     [super viewWillAppear:animated];
     [self reloadAllData];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 - (void) viewDidAppear:(BOOL)animated
 {
@@ -149,11 +150,11 @@ static CGFloat DZtimeTableViewCellHeight = 70;
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Time Is Gold", nil);
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dz_backgroud"]];
+    self.tableView.backgroundColor = [UIColor themeBackgroupColor];
     [PrettyShadowPlainTableview setUpTableView:self.tableView];
     UIBarButtonItem* pieChartIem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Analyze", ) style:UIBarButtonItemStyleBordered target:self action:@selector(showThePieChart)];
     self.navigationItem.rightBarButtonItem = pieChartIem;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewTimeTrack)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewTimeTrack)];
     if (![DZTimeTrackManager isLastTrackFinished]) {
         DZTrackTimeViewController* trackView = [[DZTrackTimeViewController alloc] init];
         [self.navigationController pushViewController:trackView animated:YES];
